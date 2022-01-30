@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private float moveSpeed = 7f; //serialise = expose to editor, change directly in unity
     [SerializeField]private float jumpForce = 14f; //public = not as good, allows access to all scripts
 
+    private enum MovementState { idle, running, jump, fall } //create own data type, finite set of values
+    //private MovementState state = MovementState.idle;
+
     //int wholeNumber = 16; //store whole number in variable
     //float decimalNumber = 4.56f; //floating point literal
     //string text = "blank"; //entry text
@@ -44,20 +47,37 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateAnimationState() //no results returned, exclusive execution
     {
+
+        MovementState state; //local variable, values assigned below
+
         if (dirX > 0f)
         {
-            anim.SetBool("running", true);
+            //anim.SetBool("running", true);
+            state = MovementState.running;
             sprite.flipX = false; //flip sprite, match to right movement
 
         }
         else if (dirX < 0)
         {
-            anim.SetBool("running", true); //running to the left
+            //anim.SetBool("running", true); //running to the left
+            state = MovementState.running;
             sprite.flipX = true; //flip sprite, match to left movement
         }
         else
         {
-            anim.SetBool("running", false); //set to idle
+            //anim.SetBool("running", false); //set to idle
+            state = MovementState.idle;
         }
+
+        if(rb.velocity.y > .1f) //player is in air, execute jumping animation
+        {
+            state = MovementState.jump;
+        }
+        else if(rb.velocity.y < -1f) //falling
+        {
+            state = MovementState.fall;
+        }
+
+        anim.SetInteger("state", (int)state); //(int) = turn enum into corresponding integer rep
     }
 }
