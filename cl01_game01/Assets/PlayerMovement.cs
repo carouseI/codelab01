@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
 
     private float dirX = 0f;
+    private float moveSpeed = 7f;
+    private float jumpForce = 14f;
 
     //int wholeNumber = 16; //store whole number in variable
     //float decimalNumber = 4.56f; //floating point literal
@@ -29,12 +31,12 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("Hello, world!");
 
         dirX = Input.GetAxisRaw("Horizontal"); //left: -1, right: +1
-        rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
+        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
 
         if (Input.GetButtonDown("Jump")) //GBD vs GKD, uses input system
         {
-            rb.velocity = new Vector2(rb.velocity.x, 14f); //call rigidbody + add speed
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce); //call rigidbody + add speed
         }
 
         UpdateAnimationUpdate(); //call method
