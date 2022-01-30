@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private SpriteRenderer sprite;
     private Animator anim;
 
     private float dirX = 0f;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 
@@ -43,10 +45,13 @@ public class PlayerMovement : MonoBehaviour
         if (dirX > 0f)
         {
             anim.SetBool("running", true);
+            sprite.flipX = false; //flip sprite, match to right movement
+
         }
         else if (dirX < 0)
         {
             anim.SetBool("running", true); //running to the left
+            sprite.flipX = true; //flip sprite, match to left movement
         }
         else
         {
