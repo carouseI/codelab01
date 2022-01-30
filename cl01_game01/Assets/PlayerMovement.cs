@@ -39,10 +39,10 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce); //call rigidbody + add speed
         }
 
-        UpdateAnimationUpdate(); //call method
+        UpdateAnimationState(); //call method
     }
 
-    private void UpdateAnimationUpdate() //no results returned, exclusive execution
+    private void UpdateAnimationState() //no results returned, exclusive execution
     {
         if (dirX > 0f)
         {
