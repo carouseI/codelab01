@@ -21,9 +21,14 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Debug.Log("Hello, world!");
+
+        float dirX = Input.GetAxisRaw("Horizontal"); //left: -1, right: +1
+        rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
+
+
         if (Input.GetButtonDown("Jump")) //GBD vs GKD, uses input system
         {
-            rb.velocity = new Vector3(0, 14f, 0); //call rigidbody + add speed
+            rb.velocity = new Vector2(rb.velocity.x, 14f); //call rigidbody + add speed
         }
     }
 }
