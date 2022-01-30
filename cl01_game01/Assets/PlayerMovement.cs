@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
 
     private float dirX = 0f;
-    private float moveSpeed = 7f;
-    private float jumpForce = 14f;
+    [SerializeField]private float moveSpeed = 7f; //serialise = expose to editor, change directly in unity
+    [SerializeField]private float jumpForce = 14f; //public = not as good, allows access to all scripts
 
     //int wholeNumber = 16; //store whole number in variable
     //float decimalNumber = 4.56f; //floating point literal
