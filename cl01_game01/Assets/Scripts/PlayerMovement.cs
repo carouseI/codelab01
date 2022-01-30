@@ -5,8 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+
+    [SerializeField] private LayerMask jumpableGround;
 
     private float dirX = 0f;
     [SerializeField]private float moveSpeed = 7f; //serialise = expose to editor, change directly in unity
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
@@ -37,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
 
-        if (Input.GetButtonDown("Jump")) //GBD vs GKD, uses input system
+        if (Input.GetButtonDown("Jump") && IsGrounded()) //GBD vs GKD, uses input system
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce); //call rigidbody + add speed
         }
@@ -73,11 +77,16 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.jump;
         }
-        else if(rb.velocity.y < -1f) //falling
+        else if(rb.velocity.y < -1f) //execute falling animation
         {
             state = MovementState.fall;
         }
 
         anim.SetInteger("state", (int)state); //(int) = turn enum into corresponding integer rep
+    }
+
+    private bool IsGrounded() //check if player is grounded
+    {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround); //create box around player, offset downwards, check for overlap with jumpableGround
     }
 }
