@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
-    [SerializeField] private LayerMask jumpableGround;
+    [SerializeField]private LayerMask jumpableGround;
 
     private float dirX = 0f;
     [SerializeField]private float moveSpeed = 7f; //serialise = expose to editor, change directly in unity
