@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private float moveSpeed = 7f; //serialise = expose to editor, change directly in unity
     [SerializeField]private float jumpForce = 14f; //public = not as good, allows access to all scripts
 
+    [SerializeField] int _maxLives = 3; //max life count
+    int currentLives;
+
     private enum MovementState { idle, running, jump, fall } //create own data type, finite set of values
     //private MovementState state = MovementState.idle;
 
@@ -26,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        currentLives = _maxLives;
+
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
