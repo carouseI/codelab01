@@ -18,20 +18,23 @@ public class GameManager : MonoBehaviour
             return _instance; //if null
         }
 
-        private void Awake()
+    private void Awake()
     {
         _instance = this; //initialise private instance
     }
 }
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Player")) //check last scene trigger if player hits checkpoint
     {
-        
+        _cutscene.SetActive(true);
+        GameManager.Instance.HitCheckpoint = true;
+        Destroy(GameObject);
     }
-
-    // Update is called once per frame
-    void Update()
+    else
     {
-        
+        if (GameManager.Instance.HitCheckpoint)
+            _cutscene.SetActive(true);
     }
+}
 }
