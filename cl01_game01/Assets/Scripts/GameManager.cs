@@ -4,37 +4,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance; //static, shared among instances, no reference needed
+    public static GameManager Instance { get; private set; } //static = 1 version of the variable, no copies
 
-    public bool HitCheckpoint { get; set; } //auto public bool property
 
-    public static GameManager Instance
-    {
-        get
-        {
-            if (_instance is null) //check if null
-                Debug.LogError("Game Manager is NULL");
+    bool _isGameOver = false; //new variable
 
-            return _instance; //if null
-        }
 
     private void Awake()
     {
-        _instance = this; //initialise private instance
+        Instance = this;
     }
-}
-    private void OnTriggerEnter(Collider other)
-{
-    if (other.CompareTag("Player")) //check last scene trigger if player hits checkpoint
+
+    public void GameOver(bool gameOver)
     {
-        _cutscene.SetActive(true);
-        GameManager.Instance.HitCheckpoint = true;
-        Destroy(GameObject);
+        _isGameOver = gameOver; //private bool
     }
-    else
+
+    public bool IsGameOver()
     {
-        if (GameManager.Instance.HitCheckpoint)
-            _cutscene.SetActive(true);
+        return _isGameOver; //value, return state of game as bool
     }
-}
 }

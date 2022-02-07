@@ -60,8 +60,19 @@ public class PlayerMovement : MonoBehaviour
 
         if(currentLives < 1)
         {
+            //_gameManager.GameOver(true); 
             Destroy(gameObject); //every damage = -1 life
         }
+
+        //if(other.tag == "Player")
+        //{
+        //    PlayerLife player = other.transform.GetComponent<Player>();
+        //    if (player == null)
+        //        return;
+
+        //    player.Damage();
+        //    Destroy(gameObject);
+        //}
     }
 
     private void UpdateAnimationState() //no results returned, exclusive execution
@@ -104,4 +115,12 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround); //create box around player, offset downwards, check for overlap with jumpableGround
     }
+
+    //IEnumerator SpawnEnemyRoutine() //stop new enemy spawn
+    //{
+    //    while (!GameManager.Instance.IsGameOver())
+    //    {
+
+    //    }
+    //}
 }
