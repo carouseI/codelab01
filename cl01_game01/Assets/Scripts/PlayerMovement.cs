@@ -54,6 +54,16 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimationState(); //call method
     }
 
+    public void Damage()
+    {
+        currentLives--;
+
+        if(currentLives < 1)
+        {
+            Destroy(gameObject); //every damage = -1 life
+        }
+    }
+
     private void UpdateAnimationState() //no results returned, exclusive execution
     {
 
