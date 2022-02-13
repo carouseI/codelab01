@@ -11645,6 +11645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 980629287}
+  - component: {fileID: 980629288}
   m_Layer: 0
   m_Name: Melon
   m_TagString: Untagged
@@ -11666,6 +11667,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &980629288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980629286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b9b924cfd5c4eaaa94e2827078a440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 1339080963}
 --- !u!4 &983976470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5456432156347339732, guid: 3bbc6876c4c9542cab75f5dccd145355, type: 3}
@@ -12725,7 +12739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b68bfaae07704fcaadd6100c73bfaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
   melonText: {fileID: 1339080963}
 --- !u!114 &1440044086
 MonoBehaviour:
