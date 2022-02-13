@@ -7,6 +7,8 @@ public class ItemCollector : MonoBehaviour
 {
     private int melons = 0; //counter
 
+    //public Text score;
+
     [SerializeField] private Text melonText;
 
     private void OnTriggerEnter2D(Collider2D collision)
