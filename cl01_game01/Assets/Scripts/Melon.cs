@@ -26,5 +26,6 @@ public class Melon : MonoBehaviour
     public void Reset()
     {
         PlayerPrefs.DeleteKey("HighScore"); //reset settings + start over
+        highScore.text = "0";
     }
 }
