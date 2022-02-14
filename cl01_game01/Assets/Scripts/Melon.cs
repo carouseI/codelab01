@@ -6,6 +6,7 @@ public class Melon : MonoBehaviour
     public Text score; //accessible across project
     public Text highScore;
 
+
     void Start()
     {
         highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString(); //store number as high score, display next time game is restarted 
