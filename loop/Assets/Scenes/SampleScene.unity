@@ -308,6 +308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 909712090}
+  - component: {fileID: 909712091}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -329,6 +330,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &909712091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909712089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986daabeb1c8b4552b47d25c3ee06d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: 
+  xOffset: 0
+  yOffset: 0
 --- !u!1 &2088123455
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c843956ec796444eb9cbcdc1aacd6e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fileName: 
 --- !u!114 &2088123462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,3 +484,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117e0298ee45a4c968efb3f914a06b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
