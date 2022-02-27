@@ -15,7 +15,7 @@ public class ASCIILevelLoader : MonoBehaviour
     void Start()
     {
         StreamReader reader = new StreamReader(fileName); // open file
-        string cp, te, tPfFome = reader.ReadToEnd(); //read whole file + store to variable
+        string contentOfFile = reader.ReadToEnd(); //read whole file + store to variable
         reader.Close(); //close file
 
         //Debug.Log(contentOfFile);
@@ -37,7 +37,7 @@ public class ASCIILevelLoader : MonoBehaviour
         //if (c == 'X')
         //{
         char[] rowArray = rowStr.ToCharArray(); //turn row into array of characters
-        for(int x = 0, x < rowStr.Length; x++) //loop according to number of characters
+        for(int x = 0; x < rowStr.Length; x++) //loop according to number of characters
         {
             char c = rowArray[x]; //store current character as variable c
             if(c == 'X') //if character is X
