@@ -6,7 +6,7 @@ using System.IO;
 public class ProgressSave : MonoBehaviour
 {
     public string fileName; //read this file
-
+    
     const char delimiter = '|'; //transl = "break", separates items
 
 
