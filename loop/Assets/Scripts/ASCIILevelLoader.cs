@@ -22,7 +22,7 @@ public class ASCIILevelLoader : MonoBehaviour
 
         char[] newLineChar = { '\n' }; //check fore line break character
 
-        string[] level = contentOfFile.Split(newLineChar); //split based on\n
+        string[] level = contentOfFile.Split(newLineChar); //split based on \n
 
         for(int i = 0; i < level.Length; i++) //loop each row in level
         {
