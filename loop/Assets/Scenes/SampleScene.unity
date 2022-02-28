@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c843956ec796444eb9cbcdc1aacd6e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: 
+  fileName: level01.txt
 --- !u!114 &2088123462
 MonoBehaviour:
   m_ObjectHideFlags: 0
