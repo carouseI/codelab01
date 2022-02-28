@@ -58,7 +58,7 @@ public class ASCIILevelLoader : MonoBehaviour
                     y * tube.transform.localScale.y + yOffset,
                     0
                     );
-            } else if(c == '0') //if character is O
+            } else if(c == 'O') //if character is O
             {
                 GameObject ball = Instantiate(Resources.Load("Ball")) as GameObject; //create a sphere from resources folder
                 //set position of new game object
