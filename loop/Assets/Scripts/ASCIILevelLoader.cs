@@ -27,7 +27,6 @@ public class ASCIILevelLoader : MonoBehaviour
         for(int i = 0; i < level.Length; i++) //loop each row in level
         {
             MakeRow(level[i], -i); //make row
-    
         }
     }
 
