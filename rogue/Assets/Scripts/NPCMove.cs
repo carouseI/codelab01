@@ -5,7 +5,7 @@ using UnityEngine.AI; //resolve compilation errors
 
 public class NPCMove : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] //expose in editor
     Transform _destination;
 
     NavMeshAgent _navMeshAgent; //reference
@@ -13,7 +13,7 @@ public class NPCMove : MonoBehaviour
 
     void Start()
     {
-        _navMeshAgent = this.GetComponent<NavMeshAgent>(); //find nav mesh component attached to object
+        _navMeshAgent = this.GetComponent<NavMeshAgent>(); //find nav mesh component attached to npc character
 
         if(_navMeshAgent == null) //if null
         {
@@ -21,7 +21,7 @@ public class NPCMove : MonoBehaviour
         }
         else //if not null
         {
-            SetDestination();
+            SetDestination(); //set destination; based on tranform variable exposed in unity editor
         }
     }
 
