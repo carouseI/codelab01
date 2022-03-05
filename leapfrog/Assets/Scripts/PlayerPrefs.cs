@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRef : MonoBehaviour
+public class PlayerPrefs : MonoBehaviour
 {
     const string SOUND_VOL_KEY = "soundVolKey"; //const = no change needed
 
