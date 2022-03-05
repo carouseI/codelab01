@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace Assets.Code.FSM.States
 {
+
+    [CreateAssetMenu(fileName ="IdleStat", menuName ="Unity-FSM/States/Idle", order =1)]
+
     public class IdleState: AbstractFSMState
     {
         public override bool EnterState() //call base implementation on abstract class
@@ -21,14 +24,14 @@ namespace Assets.Code.FSM.States
         {
             //throw new NotImplementedException(); //throw exception every fram update
 
-            Debug.Log("updating idle state");
+            Debug.Log("updating idle state"); 
         }
 
-        public override ExitState()
+        public override bool ExitState()
         {
             base.ExitState(); //call parent state
 
-            Debug.Loge("exiting idle state");
+            Debug.Log("exiting idle state");
 
             return true;
         }
