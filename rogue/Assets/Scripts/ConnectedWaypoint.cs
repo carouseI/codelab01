@@ -19,7 +19,7 @@ namespace Assets.Code
         public void Start()
         {
             //grad all waypoint objects in scene
-            GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+            GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("Waypoint"); //find all game objects with waypoint tag
 
             //create waypoint list for future reference
             _connections = new List<ConnectedWaypoint>();
@@ -27,11 +27,14 @@ namespace Assets.Code
             //check if connected waypoint
             for(int i = 0; i < allWaypoints.Length; i++)
             {
-                ConnectedWaypoint nextWaypoint = allWaypoints[i].GetComponent<ConnectedWaypoint>();
+                ConnectedWaypoint nextWaypoint = allWaypoints[i].GetComponent<ConnectedWaypoint>(); //get connected waypoint comp
 
-                if(nextWaypoint != null) //if not null
+                if(nextWaypoint != null) //check if comp is attached; if not null
                 {
-                    if(Vector3.Distance(this.transform.position, nextWaypoint.transform.position) <= )
+                    if(Vector3.Distance(this.transform.position, nextWaypoint.transform.position) <= _connectivityRadius && nextWaypoint != this) //if distance between this position + next waypoint position = less/equal to connectivity radius; check that next waypoint does not equal this
+                    {
+                        _connections.Add(nextWaypoint); //add to index
+                    }
                 }
             }
         }
