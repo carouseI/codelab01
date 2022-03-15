@@ -7703,7 +7703,7 @@ GameObject:
   - component: {fileID: 1806673798}
   - component: {fileID: 1806673797}
   m_Layer: 0
-  m_Name: Sphere Test
+  m_Name: Destination Sphere Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
