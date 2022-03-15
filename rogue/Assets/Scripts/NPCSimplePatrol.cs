@@ -37,15 +37,23 @@ public class NPCSimplePatrol : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        _navMeshAgent = this.GetComponent<NavMeshAgent>();
+        _navMeshAgent = this.GetComponent<NavMeshAgent>(); //check agents
 
-        if(_navMeshAgent == null)
+        if(_navMeshAgent == null) //if not null
         {
-            Debug.LogError("nav mesh agent comp not attached to " + gameObject.name);
+            Debug.LogError("nav mesh agent comp not attached to " + gameObject.name); //show this debug msg
         }
         else
         {
-            Debug.Log("insufficient patrol points for basic patrolling behaviour");
+            if(_patrolPoints != null && _patrolPoints.Count >= 2) //if null; need min 2
+            {
+                _currentPatrolIndex = 0; //check list
+                SetDestination(); //set destination
+            }
+            else
+            {
+                Debug.Log("insufficient patrol points for basic patrolling behaviour"); //show this debug msg
+            }
         }
     }
 
@@ -53,44 +61,44 @@ public class NPCSimplePatrol : MonoBehaviour
     public void Update()
     {
         //check if close to destination
-        if(_travelling && _navMeshAgent.remainingDistance <= 1.0f)
+        if(_travelling && _navMeshAgent.remainingDistance <= 1.0f) //if travelling + certain distance reached
         {
             _travelling = false;
 
-            //if going to wait, wait
+            //if changing to wait
             if (_patrolWaiting)
             {
                 _waiting = true;
-                _waitTimer = 0f;
+                _waitTimer = 0f; //reset wait timer
             }
-            else
+            else //it not
             {
-                ChangePatrolPoint();
-                SetDestination();
+                ChangePatrolPoint(); //change point
+                SetDestination(); //set new destination
             }
         }
 
         //if waiting
         if (_waiting)
         {
-            _waitTimer += Time.deltaTime;
-            if(_waitTimer >= _totalWaitTime)
+            _waitTimer += Time.deltaTime; //increment wait timer by delta time
+            if(_waitTimer >= _totalWaitTime) //if timer exceeds total wait time (3 sec)
             {
-                _waiting = false;
+                _waiting = false; //no longer waiting
 
-                ChangePatrolPoint();
-                SetDestination();
+                ChangePatrolPoint(); //change point
+                SetDestination(); //set new destination
             }
         }
     }
 
     private void SetDestination()
     {
-        if(_patrolPoints != null)
+        if(_patrolPoints != null) //if not null
         {
-            Vector3 targetVector = _patrolPoints[_currentPatrolIndex].transform.position;
-            _navMeshAgent.SetDestination(targetVector);
-            _travelling = true;
+            Vector3 targetVector = _patrolPoints[_currentPatrolIndex].transform.position; //provided patrol points, get waypoint index + target vector
+            _navMeshAgent.SetDestination(targetVector); //set new destination to target vector
+            _travelling = true; //reset travelling to true
         }
     }
 
@@ -99,4 +107,43 @@ public class NPCSimplePatrol : MonoBehaviour
     /// small probability allows for movement forwards or backwards
     /// <summary>
     private void ChangePatrolPoint()
+    {
+        if(UnityEngine.Random.Range(0f, 1f) <= _switchProbability) //use rando, generate range between 0-1, check if less/equal to switch prob
+        {
+            _patrolForward = !_patrolForward; //choose to patrol forwards or backwards, make opposite of whatever value it is; negate boolean value
+        }
+
+        if (_patrolForward) //if forward patrol
+        {
+            _currentPatrolIndex = (_currentPatrolIndex + 1) % _patrolPoints.Count;
+            //get index + increment by 1; check if exceeds point count
+            //modulos command = if exceed, reset to 0
+
+
+            //alt method
+            //_currentPatrolIndex++;
+
+            //if(_currentPatrolIndex >= _patrolPoints.Count)
+            //{
+            //    _currentPatrolIndex = 0;
+            //}
+
+        }
+
+        else
+        {
+            if(--_currentPatrolIndex < 0) //decrement index, then check if less than 0
+            {
+                _currentPatrolIndex = _patrolPoints.Count - 1; //if less than, set to count - 1
+            }
+
+            //alt method
+            //_currentPatrolIndex--;
+
+            //if(_currentPatrolIndex > 0)
+            //{
+            //    _currentPatrolIndex = _patrolPoints.Count - 1;
+            //}
+        }
+    }
 }
