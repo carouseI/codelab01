@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
+
+//waypoint subclass
 namespace Assets.Code
 {
     public class ConnectedWaypoint : Waypoint
     {
         [SerializeField]
-        protected float _connectivityRadius = 50f;
+        protected float _connectivityRadius = 50f; //added connectivity radius, set to to 50 units
 
-        List<ConnectedWaypoint> _connections;
+        List<ConnectedWaypoint> _connections; //maintain own active list of waypoints to connect to
 
 
         public void Start()
@@ -26,6 +28,11 @@ namespace Assets.Code
             for(int i = 0; i < allWaypoints.Length; i++)
             {
                 ConnectedWaypoint nextWaypoint = allWaypoints[i].GetComponent<ConnectedWaypoint>();
+
+                if(nextWaypoint != null) //if not null
+                {
+                    if(Vector3.Distance(this.transform.position, nextWaypoint.transform.position) <= )
+                }
             }
         }
 

@@ -1553,7 +1553,7 @@ GameObject:
   - component: {fileID: 309770985}
   m_Layer: 0
   m_Name: Patrol Point (7)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3151,7 +3151,7 @@ GameObject:
   - component: {fileID: 762223085}
   m_Layer: 0
   m_Name: Patrol Points
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5450,7 +5450,7 @@ GameObject:
   - component: {fileID: 1076778851}
   m_Layer: 0
   m_Name: Patrol Point (2)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5931,7 +5931,7 @@ GameObject:
   - component: {fileID: 1216089114}
   m_Layer: 0
   m_Name: Patrol Point (3)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5975,7 +5975,7 @@ GameObject:
   - component: {fileID: 1292130320}
   m_Layer: 0
   m_Name: Patrol Point (5)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6019,7 +6019,7 @@ GameObject:
   - component: {fileID: 1310539676}
   m_Layer: 0
   m_Name: Patrol Point (8)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7038,7 +7038,7 @@ GameObject:
   - component: {fileID: 1587376772}
   m_Layer: 0
   m_Name: Patrol Point (4)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8029,7 +8029,7 @@ GameObject:
   - component: {fileID: 1795219470}
   m_Layer: 0
   m_Name: Patrol Point (6)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8477,7 +8477,7 @@ GameObject:
   - component: {fileID: 1895014842}
   m_Layer: 0
   m_Name: Patrol Point (1)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
