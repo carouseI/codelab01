@@ -4215,6 +4215,7 @@ GameObject:
   - component: {fileID: 897574550}
   - component: {fileID: 897574549}
   - component: {fileID: 897574552}
+  - component: {fileID: 897574548}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -4299,6 +4300,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &897574548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897574543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95e76e6bcb3949a9846c694cf3840e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolWaiting: 0
+  _totalWaitTime: 3
+  _switchProbability: 0.2
+  _patrolPoints:
+  - {fileID: 1895014842}
+  - {fileID: 1076778851}
+  - {fileID: 1216089114}
+  - {fileID: 1587376772}
+  - {fileID: 1292130320}
+  - {fileID: 1795219470}
+  - {fileID: 309770985}
+  - {fileID: 1310539676}
 --- !u!195 &897574549
 NavMeshAgent:
   m_ObjectHideFlags: 0
