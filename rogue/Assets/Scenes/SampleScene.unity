@@ -1581,10 +1581,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 309770983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc613aaebdf340e9b1d7d25d9c4406e, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+  _connectivityRadius: 50
 --- !u!1001 &386401960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4316,14 +4317,14 @@ MonoBehaviour:
   _totalWaitTime: 3
   _switchProbability: 0.2
   _patrolPoints:
-  - {fileID: 1895014842}
-  - {fileID: 1076778851}
-  - {fileID: 1216089114}
-  - {fileID: 1587376772}
-  - {fileID: 1292130320}
-  - {fileID: 1795219470}
-  - {fileID: 309770985}
-  - {fileID: 1310539676}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &897574549
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5478,10 +5479,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076778849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc613aaebdf340e9b1d7d25d9c4406e, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+  _connectivityRadius: 50
 --- !u!1001 &1077038680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5959,10 +5961,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216089112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc613aaebdf340e9b1d7d25d9c4406e, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+  _connectivityRadius: 50
 --- !u!1 &1292130318
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,10 +6006,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292130318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc613aaebdf340e9b1d7d25d9c4406e, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+  _connectivityRadius: 50
 --- !u!1 &1310539674
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,10 +6051,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310539674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc613aaebdf340e9b1d7d25d9c4406e, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+  _connectivityRadius: 50
 --- !u!1 &1381992890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7066,10 +7071,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1587376770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc613aaebdf340e9b1d7d25d9c4406e, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+  _connectivityRadius: 50
 --- !u!1 &1595689589 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1717516069633589700, guid: eac2d0ca0d6c344b3bc0da55873923e6, type: 3}
@@ -8057,10 +8063,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1795219468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc613aaebdf340e9b1d7d25d9c4406e, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+  _connectivityRadius: 50
 --- !u!1 &1806673796
 GameObject:
   m_ObjectHideFlags: 0
@@ -8505,10 +8512,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895014840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc613aaebdf340e9b1d7d25d9c4406e, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+  _connectivityRadius: 50
 --- !u!1001 &1905289884
 PrefabInstance:
   m_ObjectHideFlags: 0
