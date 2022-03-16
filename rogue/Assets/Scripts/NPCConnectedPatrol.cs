@@ -78,45 +78,47 @@ namespace Assets.Code
         // Update is called once per frame
         public void Update()
         {
-                if(_travelling & _navMeshAgent.remainingDistance <= 1.0f) //check if close to destination
+                if(_travelling && _navMeshAgent.remainingDistance <= 1.0f) //check if close to destination
                 {
-                    _travelling = false;
-                    _waypointsVisited++;
+                    _travelling = false; //set to false
+                    _waypointsVisited++; //increment visited waypoint, maintain account
 
                     if (_patrolWaiting) //if intending to wait
                     {
                         _waiting = true; //set to true
+                        _waitTimer = 0f; //reset timer
+                    }
+                    else
+                    {
+                        SetDestination(); //set destination
                     }
                 }
 
             if (_waiting) //if waiting
             {
-                _waitTimer += Time.deltaTime;
-                if(_waitTimer >= _totalWaitTime)
+                _waitTimer += Time.deltaTime; //increment timer by delta time
+                if(_waitTimer >= _totalWaitTime) //if timer exceeds total time
                 {
-                    _waiting = false;
+                    _waiting = false; //set to false
 
-                    SetDestination();
+                    SetDestination(); //set destination
                 }
-
             }
-
         }
 
         private void SetDestination()
         {
-            if(_waypointsVisited > 0)
+            if(_waypointsVisited > 0) //if visited waypoints are greater than 0
             {
-                ConnectedWaypoint nextWaypoint = _currentWaypoint.NextWaypoint(_previousWaypoint);
-                _previousWaypoint = _currentWaypoint;
-                _currentWaypoint = nextWaypoint;
+                ConnectedWaypoint nextWaypoint = _currentWaypoint.NextWaypoint(_previousWaypoint); //call current waypoint to locate next waypoint, provide previous; maintain active reference to where it's been + where it's going
+                _previousWaypoint = _currentWaypoint; //set previous to current
+                _currentWaypoint = nextWaypoint; //set current to next
             }
 
-            Vector3 targetVector = _currentWaypoint.transform.position;
-            _navMeshAgent.SetDestination(targetVector);
+            Vector3 targetVector = _currentWaypoint.transform.position; //set target vector off new waypoint
+            _navMeshAgent.SetDestination(targetVector); //set destination in nav mesh
             _travelling = true; //set to true
         }
-
 
     }
 
