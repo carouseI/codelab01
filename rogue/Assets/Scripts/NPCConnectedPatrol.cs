@@ -83,13 +83,41 @@ namespace Assets.Code
                     _travelling = false;
                     _waypointsVisited++;
 
-                    if (_patrolWaiting)
+                    if (_patrolWaiting) //if intending to wait
                     {
-                        _waiting = true;
+                        _waiting = true; //set to true
                     }
                 }
 
+            if (_waiting) //if waiting
+            {
+                _waitTimer += Time.deltaTime;
+                if(_waitTimer >= _totalWaitTime)
+                {
+                    _waiting = false;
+
+                    SetDestination();
+                }
+
+            }
+
         }
+
+        private void SetDestination()
+        {
+            if(_waypointsVisited > 0)
+            {
+                ConnectedWaypoint nextWaypoint = _currentWaypoint.NextWaypoint(_previousWaypoint);
+                _previousWaypoint = _currentWaypoint;
+                _currentWaypoint = nextWaypoint;
+            }
+
+            Vector3 targetVector = _currentWaypoint.transform.position;
+            _navMeshAgent.SetDestination(targetVector);
+            _travelling = true; //set to true
+        }
+
+
     }
 
 }
