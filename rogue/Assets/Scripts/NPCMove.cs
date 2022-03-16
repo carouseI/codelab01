@@ -17,7 +17,7 @@ public class NPCMove : MonoBehaviour
 
         if(_navMeshAgent == null) //if null
         {
-            Debug.LogError("nav mesh agent component not attached to " + gameObject.name);
+            Debug.LogError("nav mesh agent component not attached to " + gameObject.name); //show this msg
         }
         else //if not null
         {
