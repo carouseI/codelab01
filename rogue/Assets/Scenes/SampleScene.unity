@@ -4310,21 +4310,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 897574543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f95e76e6bcb3949a9846c694cf3840e1, type: 3}
+  m_Script: {fileID: 11500000, guid: cb13f8e6ab53c4e6a82cea48425fcbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _patrolWaiting: 0
   _totalWaitTime: 3
   _switchProbability: 0.2
-  _patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!195 &897574549
 NavMeshAgent:
   m_ObjectHideFlags: 0
