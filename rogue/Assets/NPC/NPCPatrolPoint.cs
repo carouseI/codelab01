@@ -9,12 +9,12 @@ namespace Assets.Code.NPC
     public class NPCPatrolPoint : MonoBehaviour
     {
         [SerializeField]
-        protected float debugDrawRadius = 1.0F;
+        protected float debugDrawRadius = 1.0f; //set waypoint size
 
         [SerializeField]
-        protected float _connectivityRadius = 50F;
+        protected float _connectivityRadius = 50f; //set connectivity radius size
 
-        List<NPCPatrolPoint> _connections;
+        List<NPCPatrolPoint> _connections; //waypoint list
 
 
         public void Start()
@@ -25,22 +25,16 @@ namespace Assets.Code.NPC
 
             for(int i = 0; i < allWaypoints.Length; i++) //check for waypoint connection
             {
-                NPCPatrolPoint nextWaypoint = allWaypoints[i].GetComponent<NPCPatrolPoint>();
+                NPCPatrolPoint nextWaypoint = allWaypoints[i].GetComponent<NPCPatrolPoint>(); //pull from list
 
                 if(nextWaypoint != null) //if not null
                 {
-                    if(Vector3.Distance(this.transform.position, nextWaypoint.transform.position) <= _connectivityRadius && nextWaypoint)
+                    if(Vector3.Distance(this.transform.position, nextWaypoint.transform.position) <= _connectivityRadius && nextWaypoint) //if distance between this + next point is less/equal to connectivity radius + next point
                     {
-                        _connections.Add(nextWaypoint);
+                        _connections.Add(nextWaypoint); //go to the next point
                     }
                 }
             }
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }
