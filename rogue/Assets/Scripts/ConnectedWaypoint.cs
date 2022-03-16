@@ -39,6 +39,25 @@ namespace Assets.Code
             }
         }
 
+        public override void OnDrawGizmos()
+        {
+            //base.OnDrawGizmos(); //autofill, check later
+
+            Gizmos.color = Color.red; //set gizmo colour
+            Gizmos.DrawWireSphere(transform.position, debugDrawRadius); //set gizmo to sphere
+
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, _connectivityRadius);
+        }
+
+        public ConnectedWaypoint NextWaypoint(ConnectedWaypoint previousWaypoint)
+        {
+            if(_connections.Count == 0) //if no waypoints
+            {
+                Debug.LogError("Insufficient waypoint count"); //show this msg
+                return null; //return null
+            }
+        }
         // Update is called once per frame
         void Update()
         {
