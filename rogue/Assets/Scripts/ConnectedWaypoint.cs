@@ -46,23 +46,36 @@ namespace Assets.Code
             Gizmos.color = Color.red; //set gizmo colour
             Gizmos.DrawWireSphere(transform.position, debugDrawRadius); //set gizmo to sphere
 
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, _connectivityRadius);
+            Gizmos.color = Color.yellow; //set connectivity radius colour to yellow
+            Gizmos.DrawWireSphere(transform.position, _connectivityRadius); //add connectivity radiuses
         }
 
-        public ConnectedWaypoint NextWaypoint(ConnectedWaypoint previousWaypoint)
+        public ConnectedWaypoint NextWaypoint(ConnectedWaypoint previousWaypoint) //check for other waypoint to reach; provide previous waypoint/location, prevent being sent back
         {
             if(_connections.Count == 0) //if no waypoints
             {
                 Debug.LogError("Insufficient waypoint count"); //show this msg
                 return null; //return null
             }
-        }
-        // Update is called once per frame
-        void Update()
-        {
+            else if(_connections.Count == 1 && _connections.Contains(previousWaypoint)) //if list is only 1 + the previous one, dead end
+            {
+                return previousWaypoint; //return
+            }
+            else
+            {
+                ConnectedWaypoint nextWaypoint; //find random point that isn't the previous one
+                int nextIndex = 0; //create index
 
+                do //run do while loop
+                {
+                    nextIndex = UnityEngine.Random.Range(0, _connections.Count); //generate random number between range of connections
+                    nextWaypoint = _connections[nextIndex]; //set next waypoint to randomly selected item in list
+                }
+
+                while (nextWaypoint == previousWaypoint); //loop; guarantee next isn't the previous one
+
+                return nextWaypoint; //return next waypoint if all checks out
+            }
         }
     }
-
 }
