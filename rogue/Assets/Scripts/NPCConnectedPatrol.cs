@@ -41,24 +41,24 @@ namespace Assets.Code
         {
             _navMeshAgent = this.GetComponent<NavMeshAgent>();
 
-            if(_navMeshAgent == null) //if null
+            if (_navMeshAgent == null) //if null
             {
                 Debug.LogError("nav mesh agent comp not attached to " + gameObject.name); //show this msg
             }
             else
             {
-                if(_currentWaypoint == null) //if no waypoint
+                if (_currentWaypoint == null) //if no waypoint
                 {
                     GameObject[] allWaypoints = GameObject.FindGameObjectsWithTag("Waypoint"); //find all available waypoint objects in scene
 
-                    if(allWaypoints.Length > 0) //if number of points is greater than 0
+                    if (allWaypoints.Length > 0) //if number of points is greater than 0
                     {
-                        while(_currentWaypoint == null)
+                        while (_currentWaypoint == null)
                         {
                             int random = UnityEngine.Random.Range(0, allWaypoints.Length); //set at random
                             ConnectedWaypoint startingWaypoint = allWaypoints[random].GetComponent<ConnectedWaypoint>(); //check if waypoint comp is attached
 
-                            if(startingWaypoint != null) //if not null
+                            if (startingWaypoint != null) //if not null
                             {
                                 _currentWaypoint = startingWaypoint; //set to current waypoint
                             }
@@ -70,14 +70,24 @@ namespace Assets.Code
                     }
                 }
 
-                SetDestination();
+                SetDestination(); //set destination
             }
 
         }
 
         // Update is called once per frame
-        void Update()
+        public void Update()
         {
+                if(_travelling & _navMeshAgent.remainingDistance <= 1.0f) //check if close to destination
+                {
+                    _travelling = false;
+                    _waypointsVisited++;
+
+                    if (_patrolWaiting)
+                    {
+                        _waiting = true;
+                    }
+                }
 
         }
     }
