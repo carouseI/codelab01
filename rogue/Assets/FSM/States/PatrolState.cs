@@ -23,7 +23,8 @@ namespace Assets.Code.FSM.States
 
         public override bool EnterState()
         {
-            if(base.EnterState()) //check if base.EnterState is working
+            EnteredState = false; //return false out of enter state; assume failure from beginning
+            if (base.EnterState()) //check if base.EnterState is working
             {
                 //grab patrol points from player + store
                 _patrolPoints = _npc.PatrolPoints; //patrol points = same as NPC points
@@ -31,23 +32,24 @@ namespace Assets.Code.FSM.States
                 if(_patrolPoints == null || _patrolPoints.Length == 0) //patrol points sent are null or an empty collection
                 {
                     Debug.LogError("PatrolState: Failed to grab patrol points from NPC"); //show debug msg
-                    return false; //return false out of enter state
-                }
-
-                if(_patrolPointIndex < 0)
-                {
-                    _patrolPointIndex = UnityEngine.Random.Range(0, _patrolPoints.Length); //generate random patrol point upon first state entry
-
                 }
                 else
                 {
-                    _patrolPointIndex = (_patrolPointIndex + 1) % _patrolPoints.Length; //modulos = calculate remainder relative to length of patrol points
-                }
+                    if (_patrolPointIndex < 0)
+                    {
+                        _patrolPointIndex = UnityEngine.Random.Range(0, _patrolPoints.Length); //generate random patrol point upon first state entry
+                    }
+                    else
+                    {
+                        _patrolPointIndex = (_patrolPointIndex + 1) % _patrolPoints.Length; //modulos = calculate remainder relative to length of patrol points
+                    }
 
-                SetDestination(_patrolPoints[_patrolPointIndex]); //set destination of patrol points @ patrol point index
+                    SetDestination(_patrolPoints[_patrolPointIndex]); //set destination of patrol points @ patrol point index
+                    EnteredState = true; //return
+                }
             }
 
-            return true; //return
+            return EnteredState; //return as true/false, only if destination is set successfully
         }
 
         public override void UpdateState()
@@ -55,6 +57,13 @@ namespace Assets.Code.FSM.States
             //throw new NotImplementedException();
 
             //check if state entry was successfull
+            if (EnteredState)
+            {
+                if(Vector3.Distance(_navMeshAgent.transform.position, _patrolPoints[_patrolPointIndex].transform.position) <= 1f) //use nav mesh agent as point of reference, compare to patrol point position; check if less than 1 float
+                {
+                    
+                }
+            }
         }
 
         private void SetDestination(NPCPatrolPoint destination)
