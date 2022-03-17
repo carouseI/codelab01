@@ -44,8 +44,8 @@ namespace Assets.Code.FSM
                 return; //pull out of method
             }
 
-            _currentState = nextState;
-            _currentState.EnterState();
+            _currentState = nextState; //set current state to next state
+            _currentState.EnterState(); //enter state
         }
 
         #endregion
