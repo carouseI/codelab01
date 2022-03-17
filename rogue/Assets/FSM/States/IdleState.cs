@@ -24,7 +24,7 @@ namespace Assets.Code.FSM.States
         {
             //throw new NotImplementedException(); //throw exception every frame update
 
-            Debug.Log("updating idle state"); 
+            Debug.Log("updating idle state"); //show debug msg
         }
 
         public override bool ExitState()
