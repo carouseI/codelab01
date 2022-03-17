@@ -39,9 +39,9 @@ namespace Assets.Code.FSM
 
         public void EnterState(AbstractFSMState nextState) //pass in particular instance of an FSM state
         {
-            if(nextState == null) //if null, pull out of method
+            if(nextState == null) //if null
             {
-                return;
+                return; //pull out of method
             }
 
             _currentState = nextState;
