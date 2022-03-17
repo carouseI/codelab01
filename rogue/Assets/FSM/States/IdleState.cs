@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Assets.Code.FSM.States
 {
 
-    [CreateAssetMenu(fileName ="IdleStat", menuName ="Unity-FSM/States/Idle", order =1)]
+    [CreateAssetMenu(fileName ="IdleState", menuName ="Unity-FSM/States/Idle", order =1)]
 
     public class IdleState: AbstractFSMState
     {
