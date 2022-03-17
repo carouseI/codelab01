@@ -35,6 +35,7 @@ namespace Assets.Code.FSM
         }
 
         #region STATE MANAGEMENT
+        //block code out in corner
 
         public void EnterState(AbstractFSMState nextState) //pass in state of FSM
         {
