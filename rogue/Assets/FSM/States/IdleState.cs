@@ -22,7 +22,7 @@ namespace Assets.Code.FSM.States
 
         public override void UpdateState() //no error detected with idle state; preventative measure, stops compiler from generating errors*
         {
-            //throw new NotImplementedException(); //throw exception every fram update
+            //throw new NotImplementedException(); //throw exception every frame update
 
             Debug.Log("updating idle state"); 
         }
