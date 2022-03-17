@@ -8,7 +8,7 @@ using UnityEngine.AI; //permission to access nav mesh agent
 
 namespace Assets.Code.NPC
 {
-    [RequireComponent(typeof(NavMeshAgent), typeof(FiniteStateMachine))] //embedded rule; when instance is created, must have a nav mesh agent + finite state machine attached to same game object -- if not, add missing components
+    [RequireComponent(typeof(NavMeshAgent), typeof(FiniteStateMachine))] //embedded rule; when instance is created, must have a nav mesh agent + finite state machine attached to same game object -- if not, add missing components; NPC pre-reqs
 
     public class NPC: MonoBehaviour
     {
