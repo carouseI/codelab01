@@ -43,15 +43,26 @@ namespace Assets.Code.FSM.States
                 {
                     _patrolPointIndex = (_patrolPointIndex + 1) % _patrolPoints.Length; //modulos = calculate remainder relative to length of patrol points
                 }
+
+                SetDestination(_patrolPoints[_patrolPointIndex]); //set destination of patrol points @ patrol point index
             }
 
-            return base.EnterState();
+            return true; //return
         }
-
 
         public override void UpdateState()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            //check if state entry was successfull
+        }
+
+        private void SetDestination(NPCPatrolPoint destination)
+        {
+            if(_navMeshAgent != null && destination != null) //if nav mesh + destination are not null
+            {
+                _navMeshAgent.SetDestination(destination.transform.position); //set patrol point destination
+            }
         }
     }
 }
