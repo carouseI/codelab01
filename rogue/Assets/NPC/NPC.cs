@@ -12,6 +12,9 @@ namespace Assets.Code.NPC
 
     public class NPC: MonoBehaviour
     {
+        [SerializeField]
+        NPCPatrolPoint[] _patrolPoints;
+
         NavMeshAgent _navMeshAgent;
         FiniteStateMachine _finiteStateMachine; //attached instance here + required comps
 
@@ -29,6 +32,14 @@ namespace Assets.Code.NPC
         public void Update()
         {
 
+        }
+
+        public NPCPatrolPoint[] PatrolPoints
+        {
+            get
+            {
+                return _patrolPoints; //return
+            }
         }
     }
 }
