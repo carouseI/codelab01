@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Code.FSM;
 using Assets.Code.NPC;
 using UnityEngine;
 using UnityEngine.AI;
@@ -16,6 +17,7 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
 {
     protected NavMeshAgent _navMeshAgent; //store as protected variable
     protected NPC _npc; //store executing npc variable
+    protected FiniteStateMachine _fsm;
 
     public ExecutionState ExecutionState { get; protected set; } //in-line property, only state can change execution state of state is
 
@@ -58,6 +60,14 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
         if(navMeshAgent != null) //if not null
         {
             _navMeshAgent = navMeshAgent; //store variable
+        }
+    }
+
+    public  virtual void SetExecutingFSM(FiniteStateMachine fsm)
+    {
+        if(fsm != null) //if not null
+        {
+            _fsm = fsm;
         }
     }
 
