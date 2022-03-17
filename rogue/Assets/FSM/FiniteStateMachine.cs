@@ -15,7 +15,7 @@ namespace Assets.Code.FSM
 
         public void Awake()
         {
-            _currentState = null; 
+            _currentState = null; //current state is null
         }
 
         public void Start()
