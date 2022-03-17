@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public enum ExecutionState //check if states are working + done executing
 {
@@ -12,6 +13,7 @@ public enum ExecutionState //check if states are working + done executing
 
 public abstract class AbstractFSMState : ScriptableObject //doesn't need to be attached to game object to function
 {
+    protected NavMeshAgent _navMeshAgent; //store as protected variable
 
     public ExecutionState ExecutionState { get; protected set; } //in-line property, only state can change execution state of state is
 
@@ -23,8 +25,11 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
     //virtual = by default, any subclasses = can override
     public virtual bool EnterState() //enter state successfully without errors
     {
+        bool success = true; //value success = true
         ExecutionState = ExecutionState.ACTIVE;
-        return true;
+        success = (_navMeshAgent != null); //if not null
+
+        return success; //return
     }
 
     public abstract void UpdateState(); //in finite state machine, update current state active in machine; can restrain, monobehaviour = no restraint on tic
@@ -34,6 +39,14 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
     {
         ExecutionState = ExecutionState.COMPLETED;
         return true;
+    }
+
+    public virtual void SetNavMeshAgent(NavMeshAgent navMeshAgent) //pass instance of type navMeshAgent
+    {
+        if(navMeshAgent != null) //if not null
+        {
+            _navMeshAgent = navMeshAgent; //store variable
+        }
     }
     
 }
