@@ -26,6 +26,13 @@ namespace Assets.Code.FSM.States
             if(base.EnterState()) //check if base.EnterState is working
             {
                 //grab patrol points from player + store
+                _patrolPoints = _npc.PatrolPoints; //patrol points = same as NPC points
+
+                if(_patrolPoints == null || _patrolPoints.Length == 0) //patrol points sent are null or an empty collection
+                {
+                    Debug.LogError("PatrolState: Failed to grab patrol points from NPC"); //show debug msg
+                    return false; //return false out of enter state
+                }
             }
 
             return base.EnterState();
