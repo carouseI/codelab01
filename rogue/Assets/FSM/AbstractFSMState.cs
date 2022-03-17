@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Code.NPC;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -14,6 +15,7 @@ public enum ExecutionState //check if states are working + done executing
 public abstract class AbstractFSMState : ScriptableObject //doesn't need to be attached to game object to function
 {
     protected NavMeshAgent _navMeshAgent; //store as protected variable
+    protected NPC _npc; //store executing npc variable
 
     public ExecutionState ExecutionState { get; protected set; } //in-line property, only state can change execution state of state is
 
@@ -25,11 +27,18 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
     //virtual = by default, any subclasses = can override
     public virtual bool EnterState() //enter state successfully without errors
     {
-        bool success = true; //value success = true
-        ExecutionState = ExecutionState.ACTIVE;
-        success = (_navMeshAgent != null); //if not null
+        bool successNavMesh = true; //value success = true
+        bool successNPC = true;
 
-        return success; //return
+        ExecutionState = ExecutionState.ACTIVE;
+
+        //check if nav mesh agent exists
+        successNavMesh = (_navMeshAgent != null); //if not null
+
+        //check if executing agent exist
+        successNPC = (_npc != null); //if not null
+
+        return successNavMesh & successNPC; //return boolean conjunction of both variables together; if both are true = successfull entry to state as far as FSM state is concerned
     }
 
     public abstract void UpdateState(); //in finite state machine, update current state active in machine; can restrain, monobehaviour = no restraint on tic
@@ -48,5 +57,12 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
             _navMeshAgent = navMeshAgent; //store variable
         }
     }
-    
+
+    public virtual void SetExecutingNPC(NPC npc) //set executing agent on state
+    {
+        if(npc != null) //if not null
+        {
+            _npc = npc;
+        }
+    }
 }

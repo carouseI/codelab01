@@ -23,9 +23,9 @@ namespace Assets.Code.FSM.States
 
         public override bool EnterState()
         {
-            if(base.EnterState)) //check if base.EnterState is working
+            if(base.EnterState()) //check if base.EnterState is working
             {
-
+                //grab patrol points from player + store
             }
 
             return base.EnterState();
