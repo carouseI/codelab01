@@ -61,7 +61,7 @@ namespace Assets.Code.FSM.States
             {
                 if(Vector3.Distance(_navMeshAgent.transform.position, _patrolPoints[_patrolPointIndex].transform.position) <= 1f) //use nav mesh agent as point of reference, compare to patrol point position; check if less than 1 float
                 {
-                    
+                    _fsm.EnterState(FSMStateType.IDLE);
                 }
             }
         }
