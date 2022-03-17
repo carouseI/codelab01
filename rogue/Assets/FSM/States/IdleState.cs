@@ -13,11 +13,11 @@ namespace Assets.Code.FSM.States
     {
         public override bool EnterState() //call base implementation on abstract class
         {
-            base.EnterState();
+            base.EnterState(); //enter state
 
-            Debug.Log("entered idle state");
+            Debug.Log("entered idle state"); //show debug msg
 
-            return true;
+            return true; //return
         }
 
         public override void UpdateState() //no error detected with idle state; preventative measure, stops compiler from generating errors*
@@ -31,9 +31,9 @@ namespace Assets.Code.FSM.States
         {
             base.ExitState(); //call parent state
 
-            Debug.Log("exiting idle state");
+            Debug.Log("exiting idle state"); //show debug msg
 
-            return true;
+            return true; //return
         }
     }
 }
