@@ -17,7 +17,8 @@ namespace Assets.Code.FSM.States
 
             Debug.Log("entered idle state"); //show debug msg
 
-            return true; //return
+            EnteredState = true; //successfully entry
+            return EnteredState; //return
         }
 
         public override void UpdateState() //no error detected with idle state; preventative measure, stops compiler from generating errors*

@@ -19,6 +19,9 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
 
     public ExecutionState ExecutionState { get; protected set; } //in-line property, only state can change execution state of state is
 
+    public bool EnteredState { get; protected set; } //can only be set internally
+
+
     public virtual void OnEnable()
     {
         ExecutionState = ExecutionState.NONE; //state not yet active, req state machine to set up and activate
