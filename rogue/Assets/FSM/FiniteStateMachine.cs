@@ -20,17 +20,17 @@ namespace Assets.Code.FSM
 
         public void Start()
         {
-            if(_startingState != null) //if starting state is not null, enter state
+            if(_startingState != null) //if starting state is not null
             {
-                EnterState(_startingState);
+                EnterState(_startingState); //enter starting state
             }
         }
 
         public void Update()
         {
-            if(_currentState != null) //if not null, update current state
+            if(_currentState != null) //if not null
             {
-                _currentState.UpdateState();
+                _currentState.UpdateState(); //update current state
             }
         }
 
