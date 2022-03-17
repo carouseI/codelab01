@@ -33,6 +33,16 @@ namespace Assets.Code.FSM.States
                     Debug.LogError("PatrolState: Failed to grab patrol points from NPC"); //show debug msg
                     return false; //return false out of enter state
                 }
+
+                if(_patrolPointIndex < 0)
+                {
+                    _patrolPointIndex = UnityEngine.Random.Range(0, _patrolPoints.Length); //generate random patrol point upon first state entry
+
+                }
+                else
+                {
+                    _patrolPointIndex = (_patrolPointIndex + 1) % _patrolPoints.Length; //modulos = calculate remainder relative to length of patrol points
+                }
             }
 
             return base.EnterState();
