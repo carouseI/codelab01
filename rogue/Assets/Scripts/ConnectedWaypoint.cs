@@ -71,7 +71,6 @@ namespace Assets.Code
                     nextIndex = UnityEngine.Random.Range(0, _connections.Count); //generate random number between range of connections
                     nextWaypoint = _connections[nextIndex]; //set next waypoint to randomly selected item in list
                 }
-
                 while (nextWaypoint == previousWaypoint); //loop; guarantee next isn't the previous one
 
                 return nextWaypoint; //return next waypoint if all checks out
