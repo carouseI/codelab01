@@ -11,6 +11,12 @@ namespace Assets.Code.FSM.States
 
     public class IdleState: AbstractFSMState
     {
+        [SerializeField]
+        float _idleDuration = 3f; //time out, transition back out into other state after 3 sec of time
+
+        float _totalDuration; //total time active
+
+
         public override void OnEnable()
         {
             base.OnEnable();
@@ -19,11 +25,15 @@ namespace Assets.Code.FSM.States
 
         public override bool EnterState() //call base implementation on abstract class
         {
-            base.EnterState(); //enter state
+            EnteredState = base.EnterState(); //enter state
 
-            Debug.Log("entered idle state"); //show debug msg
+            if (EnteredState)
+            {
+                Debug.Log("entered idle state"); //show debug msg
+                _totalDuration = 0f; //set timer to 0
+            }
 
-            EnteredState = true; //successfully entry
+            //EnteredState = true; //successfully entry
             return EnteredState; //return
         }
 
@@ -31,7 +41,17 @@ namespace Assets.Code.FSM.States
         {
             //throw new NotImplementedException(); //throw exception every frame update
 
-            Debug.Log("updating idle state"); //show debug msg
+            if (EnteredState)
+            {
+                _totalDuration += Time.deltaTime; //increment by delta time
+
+                Debug.Log("updating idle state: "+_totalDuration+" seconds."); //show debug msg + print idle timer
+
+                if(_totalDuration >= _idleDuration)//if passed idle duration
+                {
+                    _fsm.EnterState(FSMStateType.PATROL); //trigger fsm to enter state again + force patrol again
+                }
+            }
         }
 
         public override bool ExitState()
@@ -39,7 +59,6 @@ namespace Assets.Code.FSM.States
             base.ExitState(); //call parent state
 
             Debug.Log("exiting idle state"); //show debug msg
-
             return true; //return
         }
     }
