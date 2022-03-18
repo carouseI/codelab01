@@ -9,7 +9,7 @@ public class Waypoint : MonoBehaviour
 
     //public ConnectedWaypoint NextWaypoint(ConnectedWaypoint previousWaypoint)
     //{
-    //    if(_connections.Count == 0)
+    //    if (_connections.Count == 0)
     //    {
 
     //    }
