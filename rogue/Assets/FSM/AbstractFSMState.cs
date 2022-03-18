@@ -26,6 +26,7 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
     protected FiniteStateMachine _fsm;
 
     public ExecutionState ExecutionState { get; protected set; } //in-line property, only state can change execution state of state is
+    public FSMStateType StateType { get; protected set; } //get = state type property; protected set = so each class can differentiate what type it is
 
     public bool EnteredState { get; protected set; } //can only be set internally
 
