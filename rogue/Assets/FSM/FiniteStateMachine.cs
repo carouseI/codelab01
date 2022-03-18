@@ -10,8 +10,6 @@ namespace Assets.Code.FSM
 {
     public class FiniteStateMachine: MonoBehaviour
     {
-        [SerializeField] //expose in editor
-        AbstractFSMState _startingState; //variable
         AbstractFSMState _currentState;
 
         [SerializeField]
@@ -39,10 +37,7 @@ namespace Assets.Code.FSM
 
         public void Start()
         {
-            if(_startingState != null) //if starting state is not null
-            {
-                EnterState(_startingState); //enter starting state
-            }
+            EnterState(FSMStateType.IDLE); //enter idle state by default
         }
 
         public void Update()
