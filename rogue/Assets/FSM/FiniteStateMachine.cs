@@ -10,6 +10,8 @@ namespace Assets.Code.FSM
 {
     public class FiniteStateMachine: MonoBehaviour
     {
+        [SerializeField]
+        AbstractFSMState _startingState;
         AbstractFSMState _currentState;
 
         [SerializeField]
