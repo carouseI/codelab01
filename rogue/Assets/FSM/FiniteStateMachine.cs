@@ -63,13 +63,23 @@ namespace Assets.Code.FSM
                 return; //pull out of method
             }
 
+            if(_currentState != null) //if not null
+            {
+                _currentState.ExitState(); //exit state
+            }
+
             _currentState = nextState; //set current state to next state
             _currentState.EnterState(); //enter state
         }
 
         public void EnterState(FSMStateType stateType)
         {
+            if (_fsmStates.ContainsKey(stateType)) //if dictionary contains key of parameter being passed in, i.e. idle/patrol
+            {
+                AbstractFSMState nextState = _fsmStates[stateType]; //grab fsm state/value from dictionary that corresponds with key
 
+                EnterState(nextState); //enter next state
+            }
         }
 
         #endregion
