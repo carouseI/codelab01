@@ -16,7 +16,7 @@ namespace Assets.Code
 
         //total wait time at each node
         [SerializeField]
-        float _totalWaitTime = 3f; //
+        float _totalWaitTime = 3f;
 
 
         //probability of switching direction
