@@ -11,6 +11,12 @@ namespace Assets.Code.FSM.States
 
     public class IdleState: AbstractFSMState
     {
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            StateType = FSMStateType.IDLE;
+        }
+
         public override bool EnterState() //call base implementation on abstract class
         {
             base.EnterState(); //enter state
