@@ -4367,7 +4367,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3876f409d98c4ecc8535d34419e5091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _patrolPoints: []
+  _patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &897574552
 MonoBehaviour:
   m_ObjectHideFlags: 0
