@@ -10,8 +10,11 @@ namespace Assets.Code.FSM
     {
         [SerializeField] //expose in editor
         AbstractFSMState _startingState; //variable
-
         AbstractFSMState _currentState;
+
+        [SerializeField]
+        List<AbstractFSMState> _validStates; //states to add to FSM for use
+        Dictionary<FSMStateType, AbstractFSMState> _fsmStates; //store using dictionary
 
         public void Awake()
         {
@@ -46,6 +49,11 @@ namespace Assets.Code.FSM
 
             _currentState = nextState; //set current state to next state
             _currentState.EnterState(); //enter state
+        }
+
+        public void EnterState(FSMStateType stateType)
+        {
+
         }
 
         #endregion
