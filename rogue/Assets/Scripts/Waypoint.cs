@@ -7,13 +7,13 @@ public class Waypoint : MonoBehaviour
     [SerializeField]
     protected float debugDrawRadius = 1.0F;
 
-    public ConnectedWaypoint NextWaypoint(ConnectedWaypoint previousWaypoint)
-    {
-        if(_connections.Count == 0)
-        {
+    //public ConnectedWaypoint NextWaypoint(ConnectedWaypoint previousWaypoint)
+    //{
+    //    if(_connections.Count == 0)
+    //    {
 
-        }
-    }
+    //    }
+    //}
 
     public virtual void OnDrawGizmos()
     {
