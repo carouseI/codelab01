@@ -4350,7 +4350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 291524dadf7844659883585d12efdb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingState: {fileID: 11400000, guid: 3d6f78247f6f247a3a77fbdb07463aa0, type: 2}
   _validStates:
   - {fileID: 11400000, guid: 3d6f78247f6f247a3a77fbdb07463aa0, type: 2}
   - {fileID: 11400000, guid: 9ee1d22676a174ed6a3164add6f4b6a0, type: 2}
