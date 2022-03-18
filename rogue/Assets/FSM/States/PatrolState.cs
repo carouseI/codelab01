@@ -18,6 +18,7 @@ namespace Assets.Code.FSM.States
         public override void OnEnable()
         {
             base.OnEnable();
+            StateType = FSMStateType.PATROL;
             _patrolPointIndex = -1; //set index to -1; check if index has tried anything yet
         }
 
