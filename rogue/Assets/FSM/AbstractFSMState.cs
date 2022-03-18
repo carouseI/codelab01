@@ -13,6 +13,12 @@ public enum ExecutionState //check if states are working + done executing
     TERMINATED,
 };
 
+public enum FSMStateType
+{
+    IDLE,
+    PATROL,
+};
+
 public abstract class AbstractFSMState : ScriptableObject //doesn't need to be attached to game object to function
 {
     protected NavMeshAgent _navMeshAgent; //store as protected variable
