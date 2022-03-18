@@ -33,6 +33,7 @@ namespace Assets.Code.FSM
                 state.SetExecutingFSM(this);
                 state.SetExecutingNPC(npc);
                 state.SetNavMeshAgent(navMeshAgent);
+                _fsmStates.Add(state.StateType, state);
             }
         }
 
