@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Assets.Code.NPC;
+using Assets.Code.NPCCode;
 using UnityEngine;
 
 namespace Assets.Code.FSM.States

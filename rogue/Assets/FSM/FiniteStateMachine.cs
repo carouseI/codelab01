@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.AI;
+using Assets.Code.NPCCode;
 
 namespace Assets.Code.FSM
 {
@@ -19,6 +21,19 @@ namespace Assets.Code.FSM
         public void Awake()
         {
             _currentState = null; //current state is null
+
+            _fsmStates = new Dictionary<FSMStateType, AbstractFSMState>(); //set up states
+
+
+            NavMeshAgent navMeshAgent = this.GetComponent<NavMeshAgent>(); //grab nav mesh for foreach
+            NPC npc = this.GetComponent<NPC>(); //grab npc for foreach; attached to same game object as nav mesh
+
+            foreach(AbstractFSMState state in _validStates) //iterate through each state in valid states list
+            {
+                state.SetExecutingFSM(this);
+                state.SetExecutingNPC(npc);
+                state.SetNavMeshAgent(navMeshAgent);
+            }
         }
 
         public void Start()

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Code.FSM;
-using Assets.Code.NPC;
+using Assets.Code.NPCCode;
 using UnityEngine;
 using UnityEngine.AI;
 

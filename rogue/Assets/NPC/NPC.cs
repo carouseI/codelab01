@@ -6,7 +6,7 @@ using Assets.Code.FSM;
 using UnityEngine;
 using UnityEngine.AI; //permission to access nav mesh agent
 
-namespace Assets.Code.NPC
+namespace Assets.Code.NPCCode
 {
     [RequireComponent(typeof(NavMeshAgent), typeof(FiniteStateMachine))] //embedded rule; when instance is created, must have a nav mesh agent + finite state machine attached to same game object -- if not, add missing components; NPC pre-reqs
 
