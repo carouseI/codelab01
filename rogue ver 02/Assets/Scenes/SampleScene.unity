@@ -1581,10 +1581,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 309770983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1001 &386401960
 PrefabInstance:
@@ -5489,10 +5489,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076778849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1001 &1077038680
 PrefabInstance:
@@ -5971,10 +5971,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1199958913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1 &1216089112
 GameObject:
@@ -6016,10 +6016,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1216089112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1 &1292130318
 GameObject:
@@ -6061,10 +6061,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1292130318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1 &1310539674
 GameObject:
@@ -6106,10 +6106,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1310539674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1 &1381992890
 GameObject:
@@ -7208,10 +7208,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1587376770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1 &1595689589 stripped
 GameObject:
@@ -7735,10 +7735,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1727431590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1001 &1729798625
 PrefabInstance:
@@ -8245,10 +8245,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1795219468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1 &1806673796
 GameObject:
@@ -8694,10 +8694,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895014840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f10883379f14698a7c2426f1ce6c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b076d40dda64ea092bc3fa5329cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 10
+  debugDrawRadius: 1
   _connectivityRadius: 50
 --- !u!1001 &1905289884
 PrefabInstance:
