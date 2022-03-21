@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1001 &386401960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5502,7 +5502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1001 &1077038680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5984,7 +5984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1 &1216089112
 GameObject:
   m_ObjectHideFlags: 0
@@ -6029,7 +6029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1 &1292130318
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,7 +6074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1 &1310539674
 GameObject:
   m_ObjectHideFlags: 0
@@ -6119,7 +6119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1 &1381992890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,7 +7221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1 &1595689589 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1717516069633589700, guid: eac2d0ca0d6c344b3bc0da55873923e6, type: 3}
@@ -7748,7 +7748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1001 &1729798625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8258,7 +8258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1 &1806673796
 GameObject:
   m_ObjectHideFlags: 0
@@ -8707,7 +8707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 50
+  _connectivityRadius: 5
 --- !u!1001 &1905289884
 PrefabInstance:
   m_ObjectHideFlags: 0
