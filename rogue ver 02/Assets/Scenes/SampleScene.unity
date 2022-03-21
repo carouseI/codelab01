@@ -4439,7 +4439,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _patrolPoints:
-  - {fileID: 0}
+  - {fileID: 1895014842}
+  - {fileID: 1076778851}
+  - {fileID: 1216089114}
+  - {fileID: 1587376772}
+  - {fileID: 1292130320}
+  - {fileID: 1795219470}
+  - {fileID: 309770985}
+  - {fileID: 1310539676}
+  - {fileID: 1199958915}
+  - {fileID: 1727431592}
 --- !u!114 &897574552
 MonoBehaviour:
   m_ObjectHideFlags: 0
