@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Code.FSM;
 //using Assets.Code.FSM;
 using Assets.Code.NPCCode;
 using UnityEngine;
@@ -22,8 +24,8 @@ public enum FSMStateType
 public abstract class AbstractFSMState : ScriptableObject //doesn't need to be attached to game object to function
 {
     protected NavMeshAgent _navMeshAgent; //store as protected variable
-    //protected NPC _npc; //store executing npc variable
-    //protected FiniteStateMachine _fsm;
+    protected NPC _npc; //store executing npc variable
+    protected FiniteStateMachine _fsm;
 
     public ExecutionState ExecutionState { get; protected set; } //in-line property, only state can change execution state of state is
     public FSMStateType StateType { get; protected set; } //get = state type property; protected set = so each class can differentiate what type it is
@@ -34,6 +36,16 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
     public virtual void OnEnable()
     {
         ExecutionState = ExecutionState.NONE; //state not yet active, req state machine to set up and activate
+    }
+
+    internal void SetExecutingNPC(NPC npc)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void SetExecutingFSM(FiniteStateMachine finiteStateMachine)
+    {
+        throw new NotImplementedException();
     }
 
     //virtual = by default, any subclasses = can override

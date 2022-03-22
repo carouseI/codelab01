@@ -13,7 +13,7 @@ namespace Assets.Code.NPCCode
     public class NPC : MonoBehaviour
     {
         [SerializeField]
-        NPCPatrolPoint[] _patrolPoints;
+        NPCPatrolPoint[] _patrolPoints; //add as serialised field to enable attachments
 
         NavMeshAgent _navMeshAgent;
         //FiniteStateMachine _finiteStateMachine; //attached instance here + required comps
@@ -21,7 +21,7 @@ namespace Assets.Code.NPCCode
         public void Awake()
         {
             _navMeshAgent = this.GetComponent<NavMeshAgent>(); //this. = optional, gets autocorrect to kick in
-            //_finiteStateMachine = this.GetComponent<FiniteStateMachine>();
+            FiniteStateMachine _finiteStateMachine = this.GetComponent<FiniteStateMachine>(); //fsm at beginning = generate local, _fsm  underlined red; TEMP
         }
 
         public void Start()
