@@ -2282,7 +2282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1 &400007011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7075999540168228, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
@@ -2493,7 +2493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1 &485648227 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6998030089473774522, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
@@ -3052,7 +3052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1001 &603513183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3413,7 +3413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1 &654691182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
@@ -3968,7 +3968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1 &837006237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7075999540168228, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
@@ -5277,7 +5277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1001 &1097433366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5892,7 +5892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1001 &1177482597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6177,7 +6177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1001 &1242846736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8104,7 +8104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1 &1629538461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
@@ -8658,7 +8658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1001 &1724387899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9601,7 +9601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
-  _connectivityRadius: 30
+  _connectivityRadius: 40
 --- !u!1 &1967818456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
