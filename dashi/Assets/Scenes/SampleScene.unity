@@ -1285,7 +1285,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!136 &270534357
 CapsuleCollider:
@@ -1398,7 +1398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4039b6bfb71284c8da5db4de132dc443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingState: {fileID: 11400000, guid: 0e59d2bae6d5941189bd05926ea0fe88, type: 2}
   _validStates:
   - {fileID: 11400000, guid: 0e59d2bae6d5941189bd05926ea0fe88, type: 2}
   - {fileID: 11400000, guid: b56cfc42b7fae4528b1071964ca3a237, type: 2}
@@ -9036,7 +9035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1787011101
 SphereCollider:
   m_ObjectHideFlags: 0
