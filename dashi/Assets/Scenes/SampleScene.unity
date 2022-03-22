@@ -1279,7 +1279,6 @@ GameObject:
   - component: {fileID: 270534363}
   - component: {fileID: 270534361}
   - component: {fileID: 270534362}
-  - component: {fileID: 270534364}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1395,10 +1394,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 270534356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1883dc544215a4482ac633cf104fcea9, type: 3}
+  m_Script: {fileID: 11500000, guid: 64c88e61fe1fc416f9cfe3b0728e1f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destination: {fileID: 1787011104}
+  _patrolPoints: []
 --- !u!54 &270534363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1415,21 +1414,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &270534364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270534356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f18e8a483ea2480da0257c4551b35c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _patrolWaiting: 1
-  _totalWaitTime: 3
-  _switchProbability: 0.2
 --- !u!1 &281148295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7075999540168228, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
