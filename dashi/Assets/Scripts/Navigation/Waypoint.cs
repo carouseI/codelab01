@@ -6,7 +6,7 @@ using Assets.Code;
 public class Waypoint : MonoBehaviour
 {
     [SerializeField]
-    protected float debugDrawRadius = 1.0F;
+    protected float debugDrawRadius = 1.0F; //set radius to 1 float
 
     public virtual void OnDrawGizmos()
     {
