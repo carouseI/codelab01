@@ -1774,6 +1774,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 502c1563538db4e37ab235061425ed1a, type: 2}
+    - target: {fileID: 5858034691374546489, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
       propertyPath: m_Name
       value: trWall
@@ -1792,6 +1796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1946902587}
     m_Modifications:
+    - target: {fileID: 5409290828842142412, guid: 53c3abaf16e214d3e94274243781b3de, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6277906623823601997, guid: 53c3abaf16e214d3e94274243781b3de, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2959,7 +2967,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3100,6 +3108,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 502c1563538db4e37ab235061425ed1a, type: 2}
+    - target: {fileID: 6327972458566963937, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
 --- !u!4 &904048335 stripped
@@ -3657,6 +3669,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 502c1563538db4e37ab235061425ed1a, type: 2}
+    - target: {fileID: 6327972458566963937, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
 --- !u!4 &1101551972 stripped
@@ -4163,6 +4179,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 502c1563538db4e37ab235061425ed1a, type: 2}
+    - target: {fileID: 5858034691374546489, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
       propertyPath: m_Name
       value: brWall
@@ -4637,6 +4657,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 502c1563538db4e37ab235061425ed1a, type: 2}
+    - target: {fileID: 5858034691374546489, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
       propertyPath: m_Name
       value: trrWall
@@ -4655,6 +4679,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1946902587}
     m_Modifications:
+    - target: {fileID: 5409290828842142412, guid: 53c3abaf16e214d3e94274243781b3de, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6277906623823601997, guid: 53c3abaf16e214d3e94274243781b3de, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5724,6 +5752,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1946902587}
     m_Modifications:
+    - target: {fileID: 6891572024228566007, guid: b10dc02113dd744b39da1fc55583767e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8389153923241413220, guid: b10dc02113dd744b39da1fc55583767e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6350,6 +6382,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 502c1563538db4e37ab235061425ed1a, type: 2}
+    - target: {fileID: 6327972458566963937, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
 --- !u!4 &1913260033 stripped
@@ -6954,7 +6990,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -7259,6 +7295,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1946902587}
     m_Modifications:
+    - target: {fileID: 6891572024228566007, guid: b10dc02113dd744b39da1fc55583767e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8389153923241413220, guid: b10dc02113dd744b39da1fc55583767e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7389,6 +7429,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 502c1563538db4e37ab235061425ed1a, type: 2}
+    - target: {fileID: 6327972458566963937, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
 --- !u!4 &2096372011 stripped
@@ -7517,6 +7561,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 502c1563538db4e37ab235061425ed1a, type: 2}
+    - target: {fileID: 5858034691374546489, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
       propertyPath: m_Name
       value: brrWall
