@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Assets.Code.FSM;
+//using Assets.Code.FSM;
 using Assets.Code.NPCCode;
 using UnityEngine;
 using UnityEngine.AI;
@@ -22,8 +22,8 @@ public enum FSMStateType
 public abstract class AbstractFSMState : ScriptableObject //doesn't need to be attached to game object to function
 {
     protected NavMeshAgent _navMeshAgent; //store as protected variable
-    protected NPC _npc; //store executing npc variable
-    protected FiniteStateMachine _fsm;
+    //protected NPC _npc; //store executing npc variable
+    //protected FiniteStateMachine _fsm;
 
     public ExecutionState ExecutionState { get; protected set; } //in-line property, only state can change execution state of state is
     public FSMStateType StateType { get; protected set; } //get = state type property; protected set = so each class can differentiate what type it is
@@ -48,7 +48,7 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
         successNavMesh = (_navMeshAgent != null); //if not null
 
         //check if executing agent exist
-        successNPC = (_npc != null); //if not null
+        //successNPC = (_npc != null); //if not null
 
         return successNavMesh & successNPC; //return boolean conjunction of both variables together; if both are true = successfull entry to state as far as FSM state is concerned
     }
@@ -70,19 +70,19 @@ public abstract class AbstractFSMState : ScriptableObject //doesn't need to be a
         }
     }
 
-    public virtual void SetExecutingFSM(FiniteStateMachine fsm)
-    {
-        if (fsm != null) //if not null
-        {
-            _fsm = fsm;
-        }
-    }
+    //public virtual void SetExecutingFSM(FiniteStateMachine fsm)
+    //{
+    //    if (fsm != null) //if not null
+    //    {
+    //        _fsm = fsm;
+    //    }
+    //}
 
-    public virtual void SetExecutingNPC(NPC npc) //set executing agent on state
-    {
-        if (npc != null) //if not null
-        {
-            _npc = npc;
-        }
-    }
+    //public virtual void SetExecutingNPC(NPC npc) //set executing agent on state
+    //{
+    //    if (npc != null) //if not null
+    //    {
+    //        _npc = npc;
+    //    }
+    //}
 }
