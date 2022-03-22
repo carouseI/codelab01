@@ -2250,7 +2250,7 @@ GameObject:
   - component: {fileID: 394691955}
   m_Layer: 0
   m_Name: Patrol Point (7)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2460,7 +2460,7 @@ GameObject:
   - component: {fileID: 483361435}
   m_Layer: 0
   m_Name: Patrol Point (8)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3018,7 +3018,7 @@ GameObject:
   - component: {fileID: 526454842}
   m_Layer: 0
   m_Name: Patrol Point (3)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3378,7 +3378,7 @@ GameObject:
   - component: {fileID: 649120333}
   m_Layer: 0
   m_Name: Patrol Point (9)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3932,7 +3932,7 @@ GameObject:
   - component: {fileID: 831325366}
   m_Layer: 0
   m_Name: Patrol Point (10)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5240,7 +5240,7 @@ GameObject:
   - component: {fileID: 1079520320}
   m_Layer: 0
   m_Name: Patrol Point (2)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5854,7 +5854,7 @@ GameObject:
   - component: {fileID: 1174633439}
   m_Layer: 0
   m_Name: Patrol Point (6)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6138,7 +6138,7 @@ GameObject:
   - component: {fileID: 1240223393}
   m_Layer: 0
   m_Name: Patrol Point (4)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8064,7 +8064,7 @@ GameObject:
   - component: {fileID: 1618590289}
   m_Layer: 0
   m_Name: Patrol Point (1)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8617,7 +8617,7 @@ GameObject:
   - component: {fileID: 1710840415}
   m_Layer: 0
   m_Name: Patrol Point (11)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9559,7 +9559,7 @@ GameObject:
   - component: {fileID: 1967387661}
   m_Layer: 0
   m_Name: Patrol Point (5)
-  m_TagString: Untagged
+  m_TagString: Waypoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
