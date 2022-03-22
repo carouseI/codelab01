@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace Assets.Code.FSM.States
 {
-
     [CreateAssetMenu(fileName = "IdleState", menuName = "Unity-FSM/States/Idle", order = 1)] //create instance of state in editor, add menu in Unity window for access
 
     public class IdleState : AbstractFSMState
