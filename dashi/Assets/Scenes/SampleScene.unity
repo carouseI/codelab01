@@ -1431,17 +1431,17 @@ MonoBehaviour:
   _totalWaitTime: 3
   _switchProbability: 0.2
   _patrolPoints:
-  - {fileID: 1618590289}
-  - {fileID: 1079520320}
-  - {fileID: 526454842}
-  - {fileID: 1240223393}
-  - {fileID: 1967387661}
-  - {fileID: 1174633439}
-  - {fileID: 394691955}
-  - {fileID: 483361435}
-  - {fileID: 649120333}
-  - {fileID: 831325366}
-  - {fileID: 1710840415}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &281148295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7075999540168228, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
@@ -2278,10 +2278,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 394691953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1 &400007011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7075999540168228, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
@@ -2488,10 +2489,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 483361433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1 &485648227 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6998030089473774522, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
@@ -3046,10 +3048,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 526454840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1001 &603513183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3406,10 +3409,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 649120331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1 &654691182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
@@ -3960,10 +3964,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 831325364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1 &837006237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7075999540168228, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
@@ -5268,10 +5273,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1079520318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1001 &1097433366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5882,10 +5888,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1174633437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1001 &1177482597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6166,10 +6173,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1240223391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1001 &1242846736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8092,10 +8100,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618590287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1 &1629538461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
@@ -8645,10 +8654,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1710840413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1001 &1724387899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9587,10 +9597,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967387659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4f55b9eb23742f2ac45f2c56b94129, type: 3}
+  m_Script: {fileID: 11500000, guid: a85ac9901b2a24760bcac0ceb95e9b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugDrawRadius: 3
+  debugDrawRadius: 1
+  _connectivityRadius: 30
 --- !u!1 &1967818456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6745188736006072098, guid: 60a7ddc7598844a4d841634a2133c63f, type: 3}
