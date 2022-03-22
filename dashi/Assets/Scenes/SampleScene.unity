@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905451236902379169, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3905451236902379169, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -957,9 +957,9 @@ GameObject:
   - component: {fileID: 270534359}
   - component: {fileID: 270534358}
   - component: {fileID: 270534357}
-  - component: {fileID: 270534361}
-  - component: {fileID: 270534362}
   - component: {fileID: 270534363}
+  - component: {fileID: 270534362}
+  - component: {fileID: 270534361}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -3709,7 +3709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905451236902379169, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3905451236902379169, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5179,7 +5179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905451236902379169, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3905451236902379169, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5599,7 +5599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3905451236902379169, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3905451236902379169, guid: b2fbd6874a39844a4bbea5dd3e7ae45d, type: 3}
       propertyPath: m_LocalPosition.x
