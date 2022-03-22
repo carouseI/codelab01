@@ -46,10 +46,10 @@ namespace Assets.Code.FSM.States
 
                 Debug.Log("updating idle state: " + _totalDuration + " seconds."); //show debug msg + print idle timer
 
-                if (_totalDuration >= _idleDuration)//if passed idle duration
-                {
-                    _fsm.EnterState(FSMStateType.PATROL); //trigger fsm to enter state again + force patrol again
-                }
+                //if (_totalDuration >= _idleDuration)//if passed idle duration
+                //{
+                //    _fsm.EnterState(FSMStateType.PATROL); //trigger fsm to enter state again + force patrol again
+                //}
             }
         }
 

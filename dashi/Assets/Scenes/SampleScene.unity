@@ -1277,8 +1277,8 @@ GameObject:
   - component: {fileID: 270534358}
   - component: {fileID: 270534357}
   - component: {fileID: 270534363}
-  - component: {fileID: 270534362}
   - component: {fileID: 270534361}
+  - component: {fileID: 270534362}
   - component: {fileID: 270534364}
   m_Layer: 0
   m_Name: NPC
@@ -9019,12 +9019,12 @@ GameObject:
   - component: {fileID: 1787011101}
   - component: {fileID: 1787011105}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &1787011101
 SphereCollider:
   m_ObjectHideFlags: 0
