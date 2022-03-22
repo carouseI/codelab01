@@ -1278,6 +1278,7 @@ GameObject:
   - component: {fileID: 270534357}
   - component: {fileID: 270534363}
   - component: {fileID: 270534361}
+  - component: {fileID: 270534364}
   - component: {fileID: 270534362}
   m_Layer: 0
   m_Name: NPC
@@ -1394,10 +1395,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 270534356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64c88e61fe1fc416f9cfe3b0728e1f25, type: 3}
+  m_Script: {fileID: 11500000, guid: 4039b6bfb71284c8da5db4de132dc443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _patrolPoints: []
+  _startingState: {fileID: 11400000, guid: 0e59d2bae6d5941189bd05926ea0fe88, type: 2}
+  _validStates: []
 --- !u!54 &270534363
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1414,6 +1416,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &270534364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270534356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c88e61fe1fc416f9cfe3b0728e1f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolPoints: []
 --- !u!1 &281148295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7075999540168228, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}

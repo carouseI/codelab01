@@ -30,8 +30,8 @@ namespace Assets.Code.FSM
 
             foreach (AbstractFSMState state in _validStates) //iterate through each state in valid states list
             {
-                state.SetExecutingFSM(this);
-                state.SetExecutingNPC(npc);
+                //state.SetExecutingFSM(this);
+                //state.SetExecutingNPC(npc);
                 state.SetNavMeshAgent(navMeshAgent);
                 _fsmStates.Add(state.StateType, state);
             }
