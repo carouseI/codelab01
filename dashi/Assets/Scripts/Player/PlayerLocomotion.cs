@@ -14,6 +14,9 @@ namespace Dashi
         [HideInInspector]
         public Transform myTransform;
 
+        [HideInInspector]
+        public AnimatorHandler animatorHandler;
+
         public new Rigidbody rigidbody;
         public GameObject normalCamera;
 
@@ -29,8 +32,10 @@ namespace Dashi
         {
             rigidbody = GetComponent<Rigidbody>(); //check for rigidbody comp
             inputHandler = GetComponent<InputHandler>(); //check for input handler comp
+            animatorHandler = GetComponentInChildren<AnimatorHandler>(); //get animator handler comp from player model under game obj
             cameraObject = Camera.main.transform; //check for camera position
             myTransform = transform;
+            animatorHandler.Initialize(); //load on start
         }
 
         public void Update()
@@ -48,6 +53,11 @@ namespace Dashi
 
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector); //find velocity = movement + vector
             rigidbody.velocity = projectedVelocity; //set velocity
+
+            if (animatorHandler.canRotate)
+            {
+                HandleRotation(delta); //enable character rotation
+            }
         }
 
         #region Movement
