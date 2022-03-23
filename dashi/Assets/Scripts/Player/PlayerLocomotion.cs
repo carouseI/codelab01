@@ -33,6 +33,23 @@ namespace Dashi
             myTransform = transform;
         }
 
+        public void Update()
+        {
+            float delta = Time.deltaTime;
+
+            inputHandler.TickInput(delta); //pass delta
+
+            moveDirection = cameraObject.forward * inputHandler.vertical; //forward + vertical movement
+            moveDirection += cameraObject.right * inputHandler.horizontal; //side + horizontal movement
+            moveDirection.Normalize(); //normalise
+
+            float speed = movementSpeed;
+            moveDirection *= speed; //set speed + movement accordingly
+
+            Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector); //find velocity = movement + vector
+            rigidbody.velocity = projectedVelocity; //set velocity
+        }
+
         #region Movement
         Vector3 normalVector;
         Vector3 targetPosition;
