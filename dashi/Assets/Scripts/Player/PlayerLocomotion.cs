@@ -54,6 +54,8 @@ namespace Dashi
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector); //find velocity = movement + vector
             rigidbody.velocity = projectedVelocity; //set velocity
 
+            animatorHandler.UpdateAnimatorValues(inputHandler.moveAmount, 0); //update value when in motion
+
             if (animatorHandler.canRotate)
             {
                 HandleRotation(delta); //enable character rotation
