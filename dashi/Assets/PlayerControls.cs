@@ -38,9 +38,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Camera"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""4aeedcba-1964-4af5-ab87-7295fdbdf0e3"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -105,7 +105,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f4319482-2921-4ccb-92ed-2cce12ae03d3"",
-                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": ""AxisDeadzone"",
                     ""groups"": """",
@@ -116,7 +116,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d9653236-06b0-4f65-b0c3-dfa32f4b81e7"",
-                    ""path"": ""<Mouse>/forwardButton"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": ""Normalize"",
                     ""groups"": """",
