@@ -1453,6 +1453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 270970356}
+  - component: {fileID: 270970357}
   m_Layer: 0
   m_Name: Camera Holder
   m_TagString: Untagged
@@ -1476,6 +1477,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &270970357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270970355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d297dae666ed44060b982dbe2d3afa5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTransform: {fileID: 848458881}
+  cameraTransform: {fileID: 963194228}
+  cameraPivotTransform: {fileID: 266584910}
+  lookSpeed: 0.1
+  followSpeed: 0.1
+  pivotSpeed: 0.03
+  minimumPivot: -35
+  maximumPivot: 35
 --- !u!1 &281148295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7075999540168228, guid: dc2d7aa28581a494bac5275a0d5d2089, type: 3}
@@ -5034,7 +5055,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20.5}
+  m_LocalPosition: {x: -0.11, y: -0.06, z: 2.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 270970356}
