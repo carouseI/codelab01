@@ -9,8 +9,8 @@ namespace Dashi
         public float horizontal;
         public float vertical;
         public float moveAmount;
-        public float mouseX;
-        public float mouseY;
+        public float mouseX; //camera will rotate accordingly
+        public float mouseY; //camera will rotate accordingly
 
         PlayerControls inputActions;
         CameraHandler cameraHandler;
