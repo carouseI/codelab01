@@ -44,7 +44,7 @@ namespace Dashi
         public void HandleCameraRotation(float delta, float mouseXInput, float mouseYInput)
         {
             lookAngle += (mouseXInput * lookSpeed) / delta; //set look angle
-            pivotAngle -= (mouseYInput * pivotSpeed) / delta; //set pivot angle
+            //pivotAngle -= (mouseYInput * pivotSpeed) / delta; //set pivot angle
             pivotAngle = Mathf.Clamp(pivotAngle, minimumPivot, maximumPivot); //clamp camera between 2 points of pivot, cannot go lower/higher than established angles
 
             Vector3 rotation = Vector3.zero;
