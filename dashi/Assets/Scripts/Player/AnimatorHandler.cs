@@ -9,7 +9,7 @@ namespace Dashi
         public Animator anim;
         int vertical;
         int horizontal;
-        public bool canRotate;
+        public bool canRotate; //enable/disable rotation when moving
 
         public void Initialize()
         {
