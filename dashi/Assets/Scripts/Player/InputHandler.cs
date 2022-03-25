@@ -13,9 +13,26 @@ namespace Dashi
         public float mouseY;
 
         PlayerControls inputActions;
+        CameraHandler cameraHandler;
 
         Vector2 movementInput;
-        Vector2 cameraInput;
+        Vector2 cameraInput; //add camera access
+
+        private void Awake()
+        {
+            cameraHandler = CameraHandler.singleton; //call method
+        }
+
+        private void FixedUpdate()
+        {
+            float delta = Time.fixedDeltaTime;
+
+            if(cameraHandler != null) //if not null
+            {
+                cameraHandler.FollowTarget(delta); //follow player
+                cameraHandler.HandleCameraRotation(delta, mouseX, mouseY); //rotate accordingly
+            }
+        }
 
         public void OnEnable()
         {
