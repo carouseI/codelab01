@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //code revamped
-public class Playerocomotion : MonoBehaviour
+public class PlayerLocomotion : MonoBehaviour
 {
     InputManager inputManager;
 
@@ -16,11 +16,18 @@ public class Playerocomotion : MonoBehaviour
 
     public void Awake()
     {
-        inputManager = GetComponent<InputManager>();
-        playerRigidbody = GetComponent<Rigidbody>();
+        inputManager = GetComponent<InputManager>(); //check for input manager comp
+        playerRigidbody = GetComponent<Rigidbody>(); //check for rb comp
+        cameraObject = Camera.main.transform; //scan for object tagged as main camera
     }
 
-    public void HandleMovement()
+    public void HandleAllMovement()
+    {
+        HandleMovement();
+        HandleRotation();
+    }
+
+    private void HandleMovement()
     {
         moveDirection = cameraObject.forward * inputManager.verticalInput; //movement input in camera direction * vertical input
         moveDirection = moveDirection + cameraObject.right * inputManager.horizontalInput; //move left/right based on horizont input + camera direction
@@ -32,7 +39,7 @@ public class Playerocomotion : MonoBehaviour
         playerRigidbody.velocity = movementVelocity; //move player based on calculations
     }
 
-    public void HandleRotation()
+    private void HandleRotation()
     {
         Vector3 targetDirection = Vector3.zero; //default to zero on all values
 
@@ -40,6 +47,9 @@ public class Playerocomotion : MonoBehaviour
         targetDirection = targetDirection + cameraObject.right * inputManager.horizontalInput;
         targetDirection.Normalize(); //search for direction of rotation based on input
         targetDirection.y = 0;
+
+        if (targetDirection == Vector3.zero)
+            targetDirection = transform.forward; // keep rotatio at looking position upon stopping
 
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection); //quaternion = calculate rotation; look to target direction
         Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime); //slerp = rotation between point A + B

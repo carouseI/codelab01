@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    InputManager inputManager;
+    PlayerLocomotion playerLocomotion;
+
+    public void Awake()
     {
-        
+        inputManager = GetComponent<InputManager>(); //check for object with input manager comp
+        playerLocomotion = GetComponent<PlayerLocomotion>(); //check for object with locomotion comp
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        inputManager.HandleAllInput();
+    }
+
+    private void FixedUpdate()
+    {
+        playerLocomotion.HandleAllMovement();
     }
 }

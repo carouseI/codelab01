@@ -28,6 +28,13 @@ public class InputManager : MonoBehaviour
         playerControls.Disable(); //turn off player controls when gameObject is disabled
     }
 
+    public void HandleAllInput()
+    {
+        HandleMovementInput();
+        //add, for future ref
+        //HandleJumpingInput
+        //HandleActionInput
+    }
     private void HandleMovementInput()
     {
         verticalInput = movementInput.y; //give value of movement input on y-axis, up/down
