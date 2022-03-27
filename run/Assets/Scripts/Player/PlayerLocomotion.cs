@@ -5,11 +5,46 @@ using UnityEngine;
 //code revamped
 public class Playerocomotion : MonoBehaviour
 {
+    InputManager inputManager;
+
     Vector3 moveDirection; //direction of player movement
+    Transform cameraObject;
+    Rigidbody playerRigidbody;
+
+    public float movementSpeed = 7;
+    public float rotationSpeed = 15;
+
+    public void Awake()
+    {
+        inputManager = GetComponent<InputManager>();
+        playerRigidbody = GetComponent<Rigidbody>();
+    }
 
     public void HandleMovement()
     {
-        
+        moveDirection = cameraObject.forward * inputManager.verticalInput; //movement input in camera direction * vertical input
+        moveDirection = moveDirection + cameraObject.right * inputManager.horizontalInput; //move left/right based on horizont input + camera direction
+        moveDirection.Normalize(); //keep vector direction, change length to 1
+        moveDirection.y = 0; //stop player from walking in air
+        moveDirection = moveDirection * movementSpeed;
+
+        Vector3 movementVelocity = moveDirection; //store speed and direction info
+        playerRigidbody.velocity = movementVelocity; //move player based on calculations
+    }
+
+    public void HandleRotation()
+    {
+        Vector3 targetDirection = Vector3.zero; //default to zero on all values
+
+        targetDirection = cameraObject.forward * inputManager.verticalInput; //set player to always facing forward/running direction
+        targetDirection = targetDirection + cameraObject.right * inputManager.horizontalInput;
+        targetDirection.Normalize(); //search for direction of rotation based on input
+        targetDirection.y = 0;
+
+        Quaternion targetRotation = Quaternion.LookRotation(targetDirection); //quaternion = calculate rotation; look to target direction
+        Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime); //slerp = rotation between point A + B
+
+        transform.rotation = playerRotation; //set player rotation
     }
 }
 
