@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class BlockCharacterCollision : MonoBehaviour
 {
+    public CapsuleCollider characterCollider;
+    public CapsuleCollider characterBlockerCollider;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Physics.IgnoreCollision(characterCollider, characterBlockerCollider, true); //set collision to blockers
     }
 }
