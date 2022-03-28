@@ -68,9 +68,9 @@ namespace Run
             }
             else
             {
-                if(distanceFromTarget > stoppingDistance)
+                if(distanceFromTarget > stoppingDistance) //distance from target is greater
                 {
-                    enemyAnimatorManager.anim.SetFloat("Vertical", 1, 0.1f, Time.deltaTime);
+                    enemyAnimatorManager.anim.SetFloat("Vertical", 1, 0.1f, Time.deltaTime); //set to 1
                 }
                 else if(distanceFromTarget <= stoppingDistance) //if distance from target is less than stopping distance
                 {
@@ -85,7 +85,7 @@ namespace Run
 
         private void HandleRotateTowardsTarget()
         {
-            if (enemyManager.isPerformingAction) //rotate manually
+            if (enemyManager.isPerformingAction) //rotate manually if attacked
             {
                 Vector3 direction = currentTarget.transform.position - transform.position; //set direction to current target - current position
                 direction.y = 0; //set y to 0
@@ -99,12 +99,12 @@ namespace Run
                 Quaternion targetRotation = Quaternion.LookRotation(direction); //target is in look direction
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed / Time.deltaTime); //set rotation
             }
-            else //rotate with pathfinding, navmesh
+            else //rotate with pathfinding, navmesh when chased
             {
                 Vector3 relativeDirection = transform.InverseTransformDirection(navMeshAgent.desiredVelocity); //[check documentation]**
                 Vector3 targetVelocity = enemyRigidBody.velocity; //set speed
 
-                navMeshAgent.enabled = true; //set to true, in use
+                navMeshAgent.enabled = true; //set to true, when in use
                 navMeshAgent.SetDestination(currentTarget.transform.position); //set destination
                 enemyRigidBody.velocity = targetVelocity; //set speed
                 transform.rotation = Quaternion.Slerp(transform.rotation, navMeshAgent.transform.rotation, rotationSpeed / Time.deltaTime); //set rotation

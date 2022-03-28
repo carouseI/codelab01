@@ -10,7 +10,7 @@ namespace Run
 
         private void Awake()
         {
-            anim.GetComponent<Animator>(); //find animator comp
+            anim = GetComponent<Animator>(); //find animator comp
             enemyLocomotionManager = GetComponentInParent<EnemyLocomotionManager>(); //find loco comp in parent
         }
 
