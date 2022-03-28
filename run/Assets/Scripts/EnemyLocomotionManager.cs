@@ -8,7 +8,8 @@ namespace Run
     {
         EnemyManager enemyManager;
 
-        LayerMask detectionLayer;
+        CharacterStats currentTarget;
+        public LayerMask detectionLayer;
 
         private void Awake()
         {
@@ -19,9 +20,20 @@ namespace Run
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, enemyManager.detectionRadius, detectionLayer); //only cast on detection layer, prevent from searching every object with collider
 
-            for(int i = 0, i < colliders.length; i++) //for every collider detected
+            for (int i = 0; i < colliders.Length; i++) //for every collider detected
             {
+                CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>();
 
+                if(characterStats != null) //if not null
+                {
+                    Vector3 targetDirection = characterStats.transform.position - transform.position;
+                    float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
+
+                    if(viewableAngle > enemyManager.minimumDetectionAngle && viewableAngle < enemyManager.maximumDetectionAngle) //character stat script is found on detection layer + within field of view
+                    {
+                        currentTarget = characterStats; //add to target list
+                    }
+                }
             }
         }
     }
