@@ -11535,13 +11535,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e23821b3330c4dda9c5017a07025a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyRigidBody: {fileID: 0}
   currentTarget: {fileID: 0}
   detectionLayer:
     serializedVersion: 2
     m_Bits: 512
   distanceFromTarget: 0
-  stoppingDistance: 0.5
-  rotationSpeed: 15
+  stoppingDistance: 1
+  rotationSpeed: 25
 --- !u!114 &2070419485
 MonoBehaviour:
   m_ObjectHideFlags: 0
