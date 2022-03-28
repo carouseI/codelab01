@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if(playerControls == null) //if null
+        if (playerControls == null) //if null
         {
             playerControls = new PlayerControls(); //use new control setup
 
@@ -48,4 +48,5 @@ public class InputManager : MonoBehaviour
         horizontalInput = movementInput.x; //left: -1, right: +1, nothing = 0
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput)); //abs = absolute, takes away sign in front of values, always positive
         animatorManager.UpdateAnimatorValues(0, moveAmount); //0 = no movement on horizontal until strafing is used
+    }
 }
