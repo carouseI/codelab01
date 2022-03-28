@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     InputManager inputManager;
+    CameraManager cameraManager;
     PlayerLocomotion playerLocomotion;
 
     public void Awake()
     {
         inputManager = GetComponent<InputManager>(); //check for object with input manager comp
+        cameraManager = FindObjectOfType<CameraManager>(); //find camera manager
         playerLocomotion = GetComponent<PlayerLocomotion>(); //check for object with locomotion comp
     }
 
@@ -21,5 +23,10 @@ public class PlayerManager : MonoBehaviour
     private void FixedUpdate()
     {
         playerLocomotion.HandleAllMovement();
+    }
+
+    private void LateUpdate() //lateUpdate = recommended when using fixedUpdate on rb, calls update after frame ended
+    {
+        cameraManager.FollowTarget(); //follow player
     }
 }
