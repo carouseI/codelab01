@@ -9,9 +9,14 @@ public class CameraManager : MonoBehaviour
     public Transform targetTransform; //object camera will follow, after every frame is processed
     public Transform cameraPivot; //object camera uses to pivot
     public Transform cameraTransform; //transform of actual camera object in scene
+    public LayerMask collisionLayers; //things camera will collide with in environment
     private float defaultPosition; //camera default position
     private Vector3 cameraFollowVelocity = Vector3.zero; //camera follow speed
+    private Vector3 cameraVectorPosition; //use vector3 to edit z position, cannot use transform
 
+    public float cameraCollisionOffset = 0.2f; //big offset = big distance pushed away from object -- how much camera will jump off objects; keep low
+    public float minimumCollisionOffset = 0.2f;
+    public float cameraCollisionRadius = 2; //use for raycasting, keep small
     public float cameraFollowSpeed = 0.2f; //float for smooth time
     public float cameraLookSpeed = 2;
     public float cameraPivotSpeed = 2;
@@ -33,6 +38,7 @@ public class CameraManager : MonoBehaviour
     {
         FollowTarget();
         RotateCamera();
+        HandleCameraCollisions();
     }
 
     private void FollowTarget()
@@ -65,6 +71,24 @@ public class CameraManager : MonoBehaviour
 
     private void HandleCameraCollisions() //move camera if brought up to object
     {
-        float targetPosition = defaultPosition;
+        float targetPosition = defaultPosition; //set default position
+        RaycastHit hit; //store info when raycast is used
+        Vector3 direction = cameraTransform.position - cameraPivot.position; //set camera direction
+        direction.Normalize(); //reset
+
+        if (Physics.SphereCast //create invisible sphere around sphereCast starting point object 
+            (cameraPivot.transform.position, cameraCollisionRadius, direction, out hit, Mathf.Abs(targetPosition), collisionLayers)) //starting point coordinates
+        {
+            float distance = Vector3.Distance(cameraPivot.position, hit.point); //set distance
+            targetPosition = targetPosition - (distance - cameraCollisionOffset); //set position
+        }
+
+        if(Mathf.Abs(targetPosition) < minimumCollisionOffset) //if collision
+        {
+            targetPosition = targetPosition - minimumCollisionOffset; //calculate distance and set new position
+        }
+
+        cameraVectorPosition.z = Mathf.Lerp(cameraTransform.localPosition.z, targetPosition, 02f); //adjust z position
+        cameraTransform.localPosition = cameraVectorPosition; //set position
     }
 }
