@@ -7,7 +7,7 @@ namespace Run
     public class EnemyLocomotionManager : MonoBehaviour
     {
         EnemyManager enemyManager;
-        EnemAnimatorManager enemyAnimatorManager;
+        EnemyAnimatorManager enemyAnimatorManager;
 
         public CharacterStats currentTarget;
         public LayerMask detectionLayer;
