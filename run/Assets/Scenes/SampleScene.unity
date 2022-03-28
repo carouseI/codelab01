@@ -894,6 +894,8 @@ MonoBehaviour:
   cameraPivotSpeed: 2
   lookAngle: 0
   pivotAngle: 0
+  minimumPivotAngle: -10
+  maximumPivotAngle: 15
 --- !u!1001 &152324793
 PrefabInstance:
   m_ObjectHideFlags: 0
