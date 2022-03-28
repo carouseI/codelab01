@@ -7,7 +7,7 @@ namespace Run
     public class EnemyManager : MonoBehaviour
     {
         EnemyLocomotionManager enemyLocomotionManager;
-        bool isPerformingAction; //tells when enemy is actually doing an action; i.e., moving, attacking
+        public bool isPerformingAction; //tells when enemy is actually doing an action; i.e., moving, attacking
 
         [Header("A.I. Settings")]
         public float detectionRadius = 20; //radius of enemy circle/detection zone

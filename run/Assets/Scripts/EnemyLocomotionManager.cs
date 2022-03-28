@@ -7,6 +7,7 @@ namespace Run
     public class EnemyLocomotionManager : MonoBehaviour
     {
         EnemyManager enemyManager;
+        EnemAnimatorManager enemyAnimatorManager;
 
         public CharacterStats currentTarget;
         public LayerMask detectionLayer;
@@ -34,6 +35,17 @@ namespace Run
                         currentTarget = characterStats; //add to target list
                     }
                 }
+            }
+        }
+
+        public void HandleMoveToTarget()
+        {
+            Vector3 targetDirection = currentTarget.transform.position - transform.position; //find target direction
+            float viewableAngle = Vector3.Angle(targetDirection, transform.forward); //find angle between where player is looking + where the target is
+
+            if (enemyManager.isPerformingAction)
+            {
+
             }
         }
     }
