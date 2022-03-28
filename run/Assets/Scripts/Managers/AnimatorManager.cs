@@ -8,6 +8,8 @@ public class AnimatorManager : MonoBehaviour
     int horizontal;
     int vertical;
 
+    public Animator anim;
+
     private void Awake()
     {
         animator = GetComponent<Animator>(); //check for animator comp
@@ -67,5 +69,12 @@ public class AnimatorManager : MonoBehaviour
 
         animator.SetFloat(horizontal, snappedHorizontal, 0.1f, Time.deltaTime); //set snapped horizontal animation; 0.1f = damp/blend time, transition between actions to smooth out motion
         animator.SetFloat(vertical, snappedVertical, 0.1f, Time.deltaTime); //set snapped vertical animation
+    }
+
+    public void PlayTargetAnimation(string targetAnim, bool isInteracting)
+    {
+        anim.applyRootMotion = isInteracting;
+        anim.SetBool("isInteracting", isInteracting);
+        anim.CrossFade(targetAnim, 0.2f);
     }
 }
