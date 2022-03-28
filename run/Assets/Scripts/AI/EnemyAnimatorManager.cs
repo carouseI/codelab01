@@ -6,6 +6,9 @@ namespace Run
 {
     public class EnemyAnimatorManager : AnimatorManager
     {
-       
+        private void Awake()
+        {
+            anim.GetComponent<Animator>(); //find animator comp
+        }
     }
 }
