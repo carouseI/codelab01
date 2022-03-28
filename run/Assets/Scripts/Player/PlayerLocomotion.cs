@@ -3,58 +3,61 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //code revamped
-public class PlayerLocomotion : MonoBehaviour
+namespace Run
 {
-    InputManager inputManager;
-
-    Vector3 moveDirection; //direction of player movement
-    Transform cameraObject;
-    Rigidbody playerRigidbody;
-
-    public float movementSpeed = 7;
-    public float rotationSpeed = 15;
-
-    public void Awake()
+    public class PlayerLocomotion : MonoBehaviour
     {
-        inputManager = GetComponent<InputManager>(); //check for input manager comp
-        playerRigidbody = GetComponent<Rigidbody>(); //check for rb comp
-        cameraObject = Camera.main.transform; //scan for object tagged as main camera
-    }
+        InputManager inputManager;
 
-    public void HandleAllMovement()
-    {
-        HandleMovement();
-        HandleRotation();
-    }
+        Vector3 moveDirection; //direction of player movement
+        Transform cameraObject;
+        Rigidbody playerRigidbody;
 
-    private void HandleMovement()
-    {
-        moveDirection = cameraObject.forward * inputManager.verticalInput; //movement input in camera direction * vertical input
-        moveDirection = moveDirection + cameraObject.right * inputManager.horizontalInput; //move left/right based on horizont input + camera direction
-        moveDirection.Normalize(); //keep vector direction, change length to 1
-        moveDirection.y = 0; //stop player from walking in air
-        moveDirection = moveDirection * movementSpeed;
+        public float movementSpeed = 7;
+        public float rotationSpeed = 15;
 
-        Vector3 movementVelocity = moveDirection; //store speed and direction info
-        playerRigidbody.velocity = movementVelocity; //move player based on calculations
-    }
+        public void Awake()
+        {
+            inputManager = GetComponent<InputManager>(); //check for input manager comp
+            playerRigidbody = GetComponent<Rigidbody>(); //check for rb comp
+            cameraObject = Camera.main.transform; //scan for object tagged as main camera
+        }
 
-    private void HandleRotation()
-    {
-        Vector3 targetDirection = Vector3.zero; //default to zero on all values
+        public void HandleAllMovement()
+        {
+            HandleMovement();
+            HandleRotation();
+        }
 
-        targetDirection = cameraObject.forward * inputManager.verticalInput; //set player to always facing forward/running direction
-        targetDirection = targetDirection + cameraObject.right * inputManager.horizontalInput;
-        targetDirection.Normalize(); //search for direction of rotation based on input
-        targetDirection.y = 0;
+        private void HandleMovement()
+        {
+            moveDirection = cameraObject.forward * inputManager.verticalInput; //movement input in camera direction * vertical input
+            moveDirection = moveDirection + cameraObject.right * inputManager.horizontalInput; //move left/right based on horizont input + camera direction
+            moveDirection.Normalize(); //keep vector direction, change length to 1
+            moveDirection.y = 0; //stop player from walking in air
+            moveDirection = moveDirection * movementSpeed;
 
-        if (targetDirection == Vector3.zero)
-            targetDirection = transform.forward; // keep rotatio at looking position upon stopping
+            Vector3 movementVelocity = moveDirection; //store speed and direction info
+            playerRigidbody.velocity = movementVelocity; //move player based on calculations
+        }
 
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection); //quaternion = calculate rotation; look to target direction
-        Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime); //slerp = rotation between point A + B
+        private void HandleRotation()
+        {
+            Vector3 targetDirection = Vector3.zero; //default to zero on all values
 
-        transform.rotation = playerRotation; //set player rotation
+            targetDirection = cameraObject.forward * inputManager.verticalInput; //set player to always facing forward/running direction
+            targetDirection = targetDirection + cameraObject.right * inputManager.horizontalInput;
+            targetDirection.Normalize(); //search for direction of rotation based on input
+            targetDirection.y = 0;
+
+            if (targetDirection == Vector3.zero)
+                targetDirection = transform.forward; // keep rotatio at looking position upon stopping
+
+            Quaternion targetRotation = Quaternion.LookRotation(targetDirection); //quaternion = calculate rotation; look to target direction
+            Quaternion playerRotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime); //slerp = rotation between point A + B
+
+            transform.rotation = playerRotation; //set player rotation
+        }
     }
 }
 
