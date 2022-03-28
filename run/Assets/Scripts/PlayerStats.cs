@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Run
 {
-    public class PlayerStats : MonoBehaviour
+    public class PlayerStats : CharacterStats
     {
         public int healthLevel = 10;
         public int maxHealth;
@@ -29,6 +29,8 @@ namespace Run
         public void TakeDamage(int damage)
         {
             currentHealth = currentHealth - damage; //deduct health when dmg is taken
+
+            healthbar.SetCurrentHealth(currentHealth); //update health
         }
     }
 }
