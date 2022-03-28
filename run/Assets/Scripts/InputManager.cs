@@ -5,10 +5,17 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     PlayerControls playerControls;
+    AnimatorManager animatorManager;
 
     public Vector2 movementInput; //vector2 = store info on 2 axis; up/down, left/right 
+    private float moveAmount;
     public float verticalInput;
     public float horizontalInput;
+
+    private void Awake()
+    {
+        animatorManager = GetComponent<AnimatorManager>(); //check for animator manager comp
+    }
 
     private void OnEnable()
     {
@@ -39,5 +46,6 @@ public class InputManager : MonoBehaviour
     {
         verticalInput = movementInput.y; //give value of movement input on y-axis, up/down
         horizontalInput = movementInput.x; //left: -1, right: +1, nothing = 0
-    }
+        moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput)); //abs = absolute, takes away sign in front of values, always positive
+        animatorManager.UpdateAnimatorValues(0, moveAmount); //0 = no movement on horizontal until strafing is used
 }
