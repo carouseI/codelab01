@@ -8,6 +8,9 @@ namespace Run
     {
         bool isPerformingAction; //tells when enemy is actually doing an action; i.e., moving, attacking
 
+        [Header("A.I. Settings")]
+        public float detectionRadius; //radius of enemy circle/detection zone
+
         private void Awake()
         {
             

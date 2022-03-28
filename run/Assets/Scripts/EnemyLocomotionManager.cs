@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLocomotionManager : MonoBehaviour
+namespace Run
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyLocomotionManager : MonoBehaviour
     {
-        
-    }
+        EnemyManager enemyManager;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        LayerMask detectionLayer;
+
+        private void Awake()
+        {
+            enemyManager = GetComponent<EnemyManager>();
+        }
+
+        public void HandleDetection() //detect when enemy spots player
+        {
+            Collider[] colliders = Physics.OverlapSphere(transform.position, enemyManager.detectionRadius, detectionLayer); //only cast on detection layer, prevent from searching every object with collider
+
+            for(int i = 0, i < colliders.length; i++) //for every collider detected
+            {
+
+            }
+        }
     }
 }
