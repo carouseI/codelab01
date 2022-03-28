@@ -46,7 +46,7 @@ public class InputManager : MonoBehaviour
     {
         verticalInput = movementInput.y; //give value of movement input on y-axis, up/down
         horizontalInput = movementInput.x; //left: -1, right: +1, nothing = 0
-        moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput)); //abs = absolute, takes away sign in front of values, always positive
+        moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput)); //abs = absolute, takes away sign in front of values, make negatives into positives; Mathf.Clamp01 = clamp between values of 0 + 1
         animatorManager.UpdateAnimatorValues(0, moveAmount); //0 = no movement on horizontal until strafing is used
     }
 }
