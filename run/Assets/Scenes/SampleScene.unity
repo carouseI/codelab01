@@ -5889,6 +5889,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e23821b3330c4dda9c5017a07025a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &1130524228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5901,6 +5904,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4094039d80b274129b6d9e58f5e77338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionRadius: 0
+  maximumDetectionAngle: 50
+  minimumDetectionAngle: -50
 --- !u!1001 &1155296892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7245,6 +7251,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c4432d673027446c6bf8dda7d8737896, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c4432d673027446c6bf8dda7d8737896, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: c4432d673027446c6bf8dda7d8737896, type: 3}
       propertyPath: m_Enabled

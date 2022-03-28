@@ -8,7 +8,7 @@ namespace Run
     {
         EnemyManager enemyManager;
 
-        CharacterStats currentTarget;
+        public CharacterStats currentTarget;
         public LayerMask detectionLayer;
 
         private void Awake()
