@@ -8,13 +8,6 @@ namespace Run
     public class CollisionDetector : MonoBehaviour
     {
         EnemyManager enemyManager;
-        //private void OnCollisionEnter(Collision collision)
-        //{
-        //    if(collision.gameObject.tag == "Death")
-        //    {
-        //        SceneManager.LoadScene("GameOver");
-        //    }
-        //}
 
         private void Awake()
         {
@@ -23,9 +16,11 @@ namespace Run
 
         void OnCollisionEnter(Collision c)
         {
-            if(c.collider.tag == "Death")
+            if(c.collider.tag == "Death") //if collision with object tagged death
             {
-                Debug.Log("player has died");
+                Debug.Log("player has died"); //show debug
+                SceneManager.LoadScene(3); //load game over scene
+                //Time.timeScale = 1;
             }
         }
     }
