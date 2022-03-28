@@ -7,6 +7,8 @@ public class CameraManager : MonoBehaviour
     InputManager inputManager;
 
     public Transform targetTransform; //object camera will follow, after every frame is processed
+    public Transform cameraPivot; //object camera uses to pivot
+
     private Vector3 cameraFollowVelocity = Vector3.zero; //camera follow speed
 
     public float cameraFollowSpeed = 0.2f; //float for smooth time
@@ -37,7 +39,18 @@ public class CameraManager : MonoBehaviour
 
     private void RotateCamera()
     {
-        lookAngle = lookAngle + (inputManager.cameraInputX * cameraLookSpeed);
-        pivotAngle = pivotAngle - (inputManager.cameraInputY * cameraPivotSpeed);
+        lookAngle = lookAngle + (inputManager.cameraInputX * cameraLookSpeed); //set camera orientation on x-axis
+        pivotAngle = pivotAngle - (inputManager.cameraInputY * cameraPivotSpeed); //set camera orientation on y-axis
+
+        Vector3 rotation = Vector3.zero; //set vector zeroes on all positions
+        rotation.y = lookAngle; //set y position to look angle
+        Quaternion targetRotation = Quaternion.Euler(rotation); //set rotation
+        transform.rotation = targetRotation; //set target rotation
+
+        rotation = Vector3.zero; //reset to 0
+        rotation.x = pivotAngle; //set pivot angle
+        targetRotation = Quaternion.Euler(rotation); //set rotation
+        cameraPivot.localRotation = targetRotation; //local = object rotation, exclude rotation in worldspace
+
     }
 }
