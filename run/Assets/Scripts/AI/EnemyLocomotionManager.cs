@@ -20,8 +20,8 @@ namespace Run
         private void Awake()
         {
             enemyManager = GetComponent<EnemyManager>();
-            enemyAnimatorManager = GetComponent<EnemyAnimatorManager>();
-            navMeshAgent = GetComponent<NavMeshAgent>();
+            enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
+            navMeshAgent = GetComponentInChildren<NavMeshAgent>();
         }
 
         public void HandleDetection() //detect when enemy spots player
