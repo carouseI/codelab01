@@ -10,13 +10,13 @@ namespace Run
         EnemyManager enemyManager;
         EnemyAnimatorManager enemyAnimatorManager;
         NavMeshAgent navMeshAgent;
-        Rigidbody enemyRigidBody;
+        public Rigidbody enemyRigidBody;
 
         public CharacterStats currentTarget;
         public LayerMask detectionLayer;
 
         public float distanceFromTarget; //distance away
-        public float stoppingDistance = 0.5f; //minimum distance to stop
+        public float stoppingDistance = 1f; //minimum distance to stop
 
         public float rotationSpeed = 15;
 
@@ -26,6 +26,12 @@ namespace Run
             enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
             navMeshAgent = GetComponentInChildren<NavMeshAgent>();
             enemyRigidBody = GetComponent<Rigidbody>();
+        }
+
+        private void Start()
+        {
+            navMeshAgent.enabled = false; //disable at start
+            enemyRigidBody.isKinematic = false; //set kinematic rb to false
         }
 
         public void HandleDetection() //detect when enemy spots player
@@ -65,6 +71,10 @@ namespace Run
                 if(distanceFromTarget > stoppingDistance)
                 {
                     enemyAnimatorManager.anim.SetFloat("Vertical", 1, 0.1f, Time.deltaTime);
+                }
+                else if(distanceFromTarget <= stoppingDistance) //if distance from target is less than stopping distance
+                {
+                    enemyAnimatorManager.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime); //stop player
                 }
             }
 
