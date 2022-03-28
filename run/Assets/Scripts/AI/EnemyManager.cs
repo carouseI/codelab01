@@ -23,6 +23,11 @@ namespace Run
 
         private void Update()
         {
+            
+        }
+
+        private void FixedUpdate() //rb move better on fixed vs regular update + less memory intensive
+        {
             HandleCurrentAction();
         }
 
@@ -31,6 +36,10 @@ namespace Run
             if(enemyLocomotionManager.currentTarget == null) //if null
             {
                 enemyLocomotionManager.HandleDetection(); //find potential target
+            }
+            else //if there is a target
+            {
+                enemyLocomotionManager.HandleMoveToTarget(); //move towards it
             }
         }
     }
