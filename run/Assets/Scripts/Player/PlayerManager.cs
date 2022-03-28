@@ -2,31 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+namespace Run
 {
-    InputManager inputManager;
-    CameraManager cameraManager;
-    PlayerLocomotion playerLocomotion;
-
-    public void Awake()
+    public class PlayerManager : MonoBehaviour
     {
-        inputManager = GetComponent<InputManager>(); //check for object with input manager comp
-        cameraManager = FindObjectOfType<CameraManager>(); //find camera manager
-        playerLocomotion = GetComponent<PlayerLocomotion>(); //check for object with locomotion comp
-    }
+        InputManager inputManager;
+        CameraManager cameraManager;
+        PlayerLocomotion playerLocomotion;
 
-    private void Update()
-    {
-        inputManager.HandleAllInput();
-    }
+        public void Awake()
+        {
+            inputManager = GetComponent<InputManager>(); //check for object with input manager comp
+            cameraManager = FindObjectOfType<CameraManager>(); //find camera manager
+            playerLocomotion = GetComponent<PlayerLocomotion>(); //check for object with locomotion comp
+        }
 
-    private void FixedUpdate()
-    {
-        playerLocomotion.HandleAllMovement();
-    }
+        private void Update()
+        {
+            inputManager.HandleAllInput();
+        }
 
-    private void LateUpdate() //lateUpdate = recommended when using fixedUpdate on rb, calls update after frame ended
-    {
-        cameraManager.HandleAllCameramovement(); //follow player
+        private void FixedUpdate()
+        {
+            playerLocomotion.HandleAllMovement();
+        }
+
+        private void LateUpdate() //lateUpdate = recommended when using fixedUpdate on rb, calls update after frame ended
+        {
+            cameraManager.HandleAllCameramovement(); //follow player
+        }
     }
 }
