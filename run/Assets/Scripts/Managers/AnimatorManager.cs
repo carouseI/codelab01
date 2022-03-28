@@ -25,15 +25,15 @@ public class AnimatorManager : MonoBehaviour
         {
             snappedHorizontal = 0.5f; //default to 0.5
         }
-        else if(horizontalMovement > 0.55f) //if greater than 0.55
+        else if (horizontalMovement > 0.55f) //if greater than 0.55
         {
             snappedHorizontal = 1; //default to 1
         }
-        else if(horizontalMovement < 0 && horizontalMovement > -0.55f) //if less than 0 + greater than -0.55
+        else if (horizontalMovement < 0 && horizontalMovement > -0.55f) //if less than 0 + greater than -0.55
         {
             snappedHorizontal = -0.5f; //default to -0.5
         }
-        else if(horizontalMovement < -0.55f) //if less than -0.55
+        else if (horizontalMovement < -0.55f) //if less than -0.55
         {
             snappedHorizontal = -1; //default to -1
         }
