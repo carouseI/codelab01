@@ -108,7 +108,7 @@ namespace Run
         }
 
 
-        private void OnAnimatorMove()
+        private void OnAnimatorMove() //temporarily commented out
         {
             //if (playerManager.isInteracting == false)
             //    return;

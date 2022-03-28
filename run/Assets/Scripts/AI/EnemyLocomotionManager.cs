@@ -22,10 +22,10 @@ namespace Run
 
         private void Awake()
         {
-            enemyManager = GetComponent<EnemyManager>();
-            enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
-            navMeshAgent = GetComponentInChildren<NavMeshAgent>();
-            enemyRigidBody = GetComponent<Rigidbody>();
+            enemyManager = GetComponent<EnemyManager>(); //check for enemy manager comp
+            enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>(); //check for enemy animator manager comp
+            navMeshAgent = GetComponentInChildren<NavMeshAgent>(); //check for navmesh
+            enemyRigidBody = GetComponent<Rigidbody>(); //check for rb
         }
 
         private void Start()
