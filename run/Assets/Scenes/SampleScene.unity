@@ -6055,9 +6055,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4094039d80b274129b6d9e58f5e77338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPerformingAction: 0
   detectionRadius: 0
   maximumDetectionAngle: 50
   minimumDetectionAngle: -50
+--- !u!95 &1130524229
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130524224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
+  m_Controller: {fileID: 9100000, guid: be536b5dc224d46d0b1105b608cd782e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1130524230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130524224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0040db78d1bba4517ae5528d16c72e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1001 &1155296892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7630,6 +7663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0040db78d1bba4517ae5528d16c72e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!114 &1332844538
 MonoBehaviour:
   m_ObjectHideFlags: 0

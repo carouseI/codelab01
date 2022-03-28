@@ -6,14 +6,18 @@ namespace run
 {
     public class AnimatorHandler : MonoBehaviour
     {
-        public Animator anim;
+        PlayerManager playerManager;
+        //InputHandler inputHandler;
+        PlayerLocomotion playerLocomotion;
         int vertical;
         int horizontal;
         public bool canRotate;
 
         public void Initialize()
         {
-            anim = GetComponent<Animator>();
+            playerManager = GetComponentInParent<PlayerManager>();
+            //anim = GetComponent<Animator>();
+            //inputHandler = GetComponentInParent<PlayerLocomotion>();
             vertical = Animator.StringToHash("Vertial");
             horizontal = Animator.StringToHash("Horizontal");
         }
@@ -46,7 +50,6 @@ namespace run
             }
             #endregion
 
-
             #region Horizontal
             //clamp horizontal movement
             float h = 0;
@@ -73,9 +76,14 @@ namespace run
             }
             #endregion
 
+            //if (isSprinting)
+            //{
+            //    //v = 2;
+            //    //h = horizontalMovement;
+            //}
 
-            anim.SetFloat(vertical, v, 0.1f, Time.deltaTime);
-            anim.SetFloat(horizontal, v, 0.1f, Time.deltaTime);
+            //anim.SetFloat(vertical, v, 0.1f, Time.deltaTime);
+            //anim.SetFloat(horizontal, v, 0.1f, Time.deltaTime);
         }
 
         public void CanRotate()
@@ -86,6 +94,29 @@ namespace run
         public void StopRotation()
         {
             canRotate = false;
+        }
+
+        public void EnableCombo()
+        {
+            //anim.SetBool("canDoCombo", true);
+        }
+
+        public void DisableCombo()
+        {
+            //anim.SetBool("canDoCombo", false);
+        }
+
+        private void OnAnimatorMove()
+        {
+            //if (playerManager.isInteracting == false)
+            //    return;
+
+            //float delta = Time.deltaTime;
+            //playerLocomotion.rigidbody.drag = 0;
+            //Vector3 deltaPosition = anim.deltaPosition;
+            //deltaPosition.y = 0;
+            //Vector3 velocity = deltaPosition / delta;
+            //playerLocomotion.rigidbody.velocity = velocity;
         }
     }
 }
