@@ -8,7 +8,8 @@ public class CameraManager : MonoBehaviour
 
     public Transform targetTransform; //object camera will follow, after every frame is processed
     public Transform cameraPivot; //object camera uses to pivot
-
+    public Transform cameraTransform; //transform of actual camera object in scene
+    private float defaultPosition; //camera default position
     private Vector3 cameraFollowVelocity = Vector3.zero; //camera follow speed
 
     public float cameraFollowSpeed = 0.2f; //float for smooth time
@@ -24,6 +25,8 @@ public class CameraManager : MonoBehaviour
     {
         inputManager = FindObjectOfType<InputManager>(); //find input manager
         targetTransform = FindObjectOfType<PlayerManager>().transform; //find player manager
+        cameraTransform = Camera.main.transform; //camera position
+        defaultPosition = cameraTransform.localPosition.z; //set default to camera position on z-axis
     }
 
     public void HandleAllCameramovement() //call all functionality from this function, instead of calling all individual functions on player manager
@@ -41,19 +44,27 @@ public class CameraManager : MonoBehaviour
 
     private void RotateCamera()
     {
+        //moved up from y sect, just to be consistent with x sect + readability
+        Vector3 rotation;
+        Quaternion targetRotation;
+
         lookAngle = lookAngle + (inputManager.cameraInputX * cameraLookSpeed); //set camera orientation on x-axis
         pivotAngle = pivotAngle - (inputManager.cameraInputY * cameraPivotSpeed); //set camera orientation on y-axis
         pivotAngle = Mathf.Clamp(pivotAngle, minimumPivotAngle, maximumPivotAngle); //lock max + min rotation values
 
-        Vector3 rotation = Vector3.zero; //set vector zeroes on all positions
+        rotation = Vector3.zero; //set vector zeroes on all positions
         rotation.y = lookAngle; //set y position to look angle
-        Quaternion targetRotation = Quaternion.Euler(rotation); //set rotation
+        targetRotation = Quaternion.Euler(rotation); //set rotation
         transform.rotation = targetRotation; //set target rotation
 
         rotation = Vector3.zero; //reset to 0
         rotation.x = pivotAngle; //set pivot angle
         targetRotation = Quaternion.Euler(rotation); //set rotation
         cameraPivot.localRotation = targetRotation; //local = object rotation, exclude rotation in worldspace
+    }
 
+    private void HandleCameraCollisions() //move camera if brought up to object
+    {
+        float targetPosition = defaultPosition;
     }
 }
