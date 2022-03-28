@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Run
 {
@@ -8,13 +9,19 @@ namespace Run
     {
         EnemyManager enemyManager;
         EnemyAnimatorManager enemyAnimatorManager;
+        NavMeshAgent navMeshAgent;
 
         public CharacterStats currentTarget;
         public LayerMask detectionLayer;
 
+        public float distanceFromTarget; //distance away
+        public float stoppingDistance = 0.5f; //minimum distance to stop
+
         private void Awake()
         {
             enemyManager = GetComponent<EnemyManager>();
+            enemyAnimatorManager = GetComponent<EnemyAnimatorManager>();
+            navMeshAgent = GetComponent<NavMeshAgent>();
         }
 
         public void HandleDetection() //detect when enemy spots player
@@ -41,11 +48,20 @@ namespace Run
         public void HandleMoveToTarget()
         {
             Vector3 targetDirection = currentTarget.transform.position - transform.position; //find target direction
+            distanceFromTarget = Vector3.Distance(currentTarget.transform.position, transform.position);
             float viewableAngle = Vector3.Angle(targetDirection, transform.forward); //find angle between where player is looking + where the target is
 
-            if (enemyManager.isPerformingAction)
+            if (enemyManager.isPerformingAction) //if performing action
             {
-
+                enemyAnimatorManager.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime); //set movement to 0
+                navMeshAgent.enabled = false; //set to false
+            }
+            else
+            {
+                if(distanceFromTarget > stoppingDistance)
+                {
+                    enemyAnimatorManager.anim.SetFloat("Vertical", 1, 0.1f, Time.deltaTime);
+                }
             }
         }
     }
