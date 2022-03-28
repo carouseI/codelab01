@@ -7,11 +7,25 @@ namespace Run
 {
     public class CollisionDetector : MonoBehaviour
     {
-        private void OnCollisionEnter(Collision collision)
+        EnemyManager enemyManager;
+        //private void OnCollisionEnter(Collision collision)
+        //{
+        //    if(collision.gameObject.tag == "Death")
+        //    {
+        //        SceneManager.LoadScene("GameOver");
+        //    }
+        //}
+
+        private void Awake()
         {
-            if(collision.gameObject.tag == "Death")
+            enemyManager = GetComponent<EnemyManager>();
+        }
+
+        void OnCollisionEnter(Collision c)
+        {
+            if(c.collider.tag == "Death")
             {
-                SceneManager.LoadScene("GameOver");
+                Debug.Log("player has died");
             }
         }
     }
