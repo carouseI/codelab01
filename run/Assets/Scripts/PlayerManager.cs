@@ -27,6 +27,6 @@ public class PlayerManager : MonoBehaviour
 
     private void LateUpdate() //lateUpdate = recommended when using fixedUpdate on rb, calls update after frame ended
     {
-        cameraManager.FollowTarget(); //follow player
+        cameraManager.HandleAllCameramovement(); //follow player
     }
 }
