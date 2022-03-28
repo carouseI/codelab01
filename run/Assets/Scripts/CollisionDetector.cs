@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class CollisionDetector : MonoBehaviour
+namespace Run
 {
-    // Start is called before the first frame update
-    void Start()
+    public class CollisionDetector : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.tag == "Death")
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+        }
     }
 }
