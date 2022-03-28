@@ -6135,19 +6135,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
-      propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6155,7 +6155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9758a30211da04854b3c7d203052f1db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -11933,7 +11933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070419480}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 57.1, y: 0.49, z: 29.9}
+  m_LocalPosition: {x: -50.8, y: 0.49, z: -41.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1130524229}
@@ -11959,7 +11959,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   distanceFromTarget: 0
-  stoppingDistance: 1
+  stoppingDistance: 0.5
   rotationSpeed: 25
 --- !u!114 &2070419485
 MonoBehaviour:
@@ -11974,9 +11974,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPerformingAction: 0
-  detectionRadius: 500
-  maximumDetectionAngle: 900
-  minimumDetectionAngle: -900
+  detectionRadius: 20
+  maximumDetectionAngle: 50
+  minimumDetectionAngle: -50
 --- !u!1001 &2072276447
 PrefabInstance:
   m_ObjectHideFlags: 0
