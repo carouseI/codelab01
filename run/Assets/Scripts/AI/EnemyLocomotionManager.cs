@@ -58,7 +58,7 @@ namespace Run
         public void HandleMoveToTarget()
         {
             Vector3 targetDirection = currentTarget.transform.position - transform.position; //find target direction
-            distanceFromTarget = Vector3.Distance(currentTarget.transform.position, transform.position);
+            distanceFromTarget = Vector3.Distance(currentTarget.transform.position, transform.position); //calculate distance from target
             float viewableAngle = Vector3.Angle(targetDirection, transform.forward); //find angle between where player is looking + where the target is
 
             if (enemyManager.isPerformingAction) //if performing action
