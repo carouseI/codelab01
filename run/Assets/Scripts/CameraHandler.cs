@@ -20,17 +20,17 @@ namespace Run
         public float pivotSpeed = 0.03f; //set rotation speed
 
         private float defaultPosition; //default position
-        private float lookAngle;
-        private float pivotAngle;
-        public float minimumPivot = -35;
-        public float maximumPivot = 35;
+        private float lookAngle; //angle
+        private float pivotAngle; //rotation
+        public float minimumPivot = -35; //min turn
+        public float maximumPivot = 35; //max turn
 
         private void Awake()
         {
             singleton = this;
             myTransform = transform; //game object transform
-            defaultPosition = cameraTransform.localPosition.z;
-            ignoreLayers = ~(1 << 8 | 1 << 9 | 1 << 10);
+            defaultPosition = cameraTransform.localPosition.z; //set default to z position
+            ignoreLayers = ~(1 << 8 | 1 << 9 | 1 << 10); //ignore following layers
         }
 
         public void FollowTarget(float delta)
