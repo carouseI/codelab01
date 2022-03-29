@@ -91,7 +91,7 @@ namespace Run
                 direction.y = 0; //set y to 0
                 direction.Normalize(); //reset
 
-                if(direction == Vector3.zero)
+                if(direction == Vector3.zero) //if direction is zero
                 {
                     direction = transform.forward; //move forward
                 }
