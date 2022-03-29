@@ -49,6 +49,7 @@ namespace Run
             //HandleJumpingInput
             //HandleActionInput
         }
+
         private void HandleMovementInput()
         {
             verticalInput = movementInput.y; //give value of movement input on y-axis, up/down
