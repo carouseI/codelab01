@@ -16,11 +16,11 @@ namespace Run
 
         public void Initialize()
         {
-            playerManager = GetComponentInParent<PlayerManager>();
-            anim = GetComponent<Animator>();
+            playerManager = GetComponentInParent<PlayerManager>(); //find player manager comp
+            anim = GetComponent<Animator>(); //find animator comp
             //inputHandler = GetComponentInParent<PlayerLocomotion>();
-            vertical = Animator.StringToHash("Vertical");
-            horizontal = Animator.StringToHash("Horizontal");
+            vertical = Animator.StringToHash("Vertical"); //set vertical movement
+            horizontal = Animator.StringToHash("Horizontal"); //set horizontal movement
         }
 
         public void UpdateAnimatorValues(float verticalMovement, float horizontalMovement, bool isSprinting)
