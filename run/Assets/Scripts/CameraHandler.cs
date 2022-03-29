@@ -15,9 +15,9 @@ namespace Run
 
         public static CameraHandler singleton;
 
-        public float lookSpeed = 0.1f;
-        public float followSpeed = 0.1f;
-        public float pivotSpeed = 0.03f;
+        public float lookSpeed = 0.1f; //set look speed
+        public float followSpeed = 0.1f; //set follow speed
+        public float pivotSpeed = 0.03f; //set rotation speed
 
         private float defaultPosition;
         private float lookAngle;
