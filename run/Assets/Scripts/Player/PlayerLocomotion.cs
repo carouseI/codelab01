@@ -13,8 +13,8 @@ namespace Run
         Transform cameraObject;
         Rigidbody playerRigidbody;
 
-        public float movementSpeed = 7;
-        public float rotationSpeed = 15;
+        public float movementSpeed = 7; //set movement speed
+        public float rotationSpeed = 15; //set rotation speed
 
         public void Awake()
         {
