@@ -35,7 +35,7 @@ namespace Run
             moveDirection = moveDirection + cameraObject.right * inputManager.horizontalInput; //move left/right based on horizont input + camera direction
             moveDirection.Normalize(); //keep vector direction, change length to 1
             moveDirection.y = 0; //stop player from walking in air
-            moveDirection = moveDirection * movementSpeed;
+            moveDirection = moveDirection * movementSpeed; //calculate, direction * speed
 
             Vector3 movementVelocity = moveDirection; //store speed and direction info
             playerRigidbody.velocity = movementVelocity; //move player based on calculations
@@ -46,9 +46,9 @@ namespace Run
             Vector3 targetDirection = Vector3.zero; //default to zero on all values
 
             targetDirection = cameraObject.forward * inputManager.verticalInput; //set player to always facing forward/running direction
-            targetDirection = targetDirection + cameraObject.right * inputManager.horizontalInput;
+            targetDirection = targetDirection + cameraObject.right * inputManager.horizontalInput; //direction + camera * horizontal input
             targetDirection.Normalize(); //search for direction of rotation based on input
-            targetDirection.y = 0;
+            targetDirection.y = 0; //set to 0
 
             if (targetDirection == Vector3.zero)
                 targetDirection = transform.forward; // keep rotatio at looking position upon stopping
