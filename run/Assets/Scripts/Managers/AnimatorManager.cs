@@ -46,6 +46,7 @@ namespace Run
                 snappedHorizontal = 0; //default to 0
             }
             #endregion
+
             #region Snapped Vertical
             if (verticalMovement > 0 && verticalMovement < 0.55f) //if greater than 0 + less the 0.55
             {
@@ -75,9 +76,9 @@ namespace Run
 
         public void PlayTargetAnimation(string targetAnim, bool isInteracting)
         {
-            anim.applyRootMotion = isInteracting;
-            anim.SetBool("isInteracting", isInteracting);
-            anim.CrossFade(targetAnim, 0.2f);
+            anim.applyRootMotion = isInteracting; //set root to interacting
+            anim.SetBool("isInteracting", isInteracting); //set bool
+            anim.CrossFade(targetAnim, 0.2f); //set cross fade
         }
     }
 }
