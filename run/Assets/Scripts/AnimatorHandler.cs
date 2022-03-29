@@ -110,15 +110,15 @@ namespace Run
 
         private void OnAnimatorMove() //temporarily commented out
         {
-            //if (playerManager.isInteracting == false)
-            //    return;
+            //if (playerManager.isInteracting == false) //if not interacting
+            //    return; //return
 
             //float delta = Time.deltaTime;
-            //playerLocomotion.rigidbody.drag = 0;
-            //Vector3 deltaPosition = anim.deltaPosition;
-            //deltaPosition.y = 0;
-            //Vector3 velocity = deltaPosition / delta;
-            //playerLocomotion.rigidbody.velocity = velocity;
+            //playerLocomotion.rigidbody.drag = 0; //set locomotion rb to 0
+            //Vector3 deltaPosition = anim.deltaPosition; //set delta position to animator position
+            //deltaPosition.y = 0; //set to 0
+            //Vector3 velocity = deltaPosition / delta; //set speed
+            //playerLocomotion.rigidbody.velocity = velocity; //set rb velocity
         }
     }
 }
