@@ -11,7 +11,7 @@ namespace Run
 
         private void Awake()
         {
-            enemyManager = GetComponent<EnemyManager>();
+            enemyManager = GetComponent<EnemyManager>(); //find enemy manager comp
         }
 
         void OnCollisionEnter(Collision c)
