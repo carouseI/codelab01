@@ -47,7 +47,7 @@ namespace Run
 
             Vector3 rotation = Vector3.zero; //reset
             rotation.y = lookAngle; //set y to vertical movement
-            Quaternion targetRotation = Quaternion.Euler(rotation);
+            Quaternion targetRotation = Quaternion.Euler(rotation); //set target rotation
             myTransform.rotation = targetRotation; //set player rotation to target rotation
 
             rotation = Vector3.zero; //reset
