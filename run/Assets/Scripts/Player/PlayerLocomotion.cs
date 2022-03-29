@@ -61,7 +61,7 @@ namespace Run
     }
 }
 
-//namespace run
+//namespace run //old, ignore
 //{
 //    public class PlayerLocomotion : MonoBehaviour
 //    {
