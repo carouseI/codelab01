@@ -18,7 +18,7 @@ namespace Run
 
         private void Awake()
         {
-            enemyLocomotionManager = GetComponent<EnemyLocomotionManager>();
+            enemyLocomotionManager = GetComponent<EnemyLocomotionManager>(); //find enemy locomotion manager comp
         }
 
         private void Update()
