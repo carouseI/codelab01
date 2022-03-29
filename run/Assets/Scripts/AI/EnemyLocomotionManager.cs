@@ -18,7 +18,7 @@ namespace Run
         public float distanceFromTarget; //distance away
         public float stoppingDistance = 1f; //minimum distance to stop
 
-        public float rotationSpeed = 15;
+        public float rotationSpeed = 15; //rotation speed
 
         private void Awake()
         {
@@ -40,12 +40,12 @@ namespace Run
 
             for (int i = 0; i < colliders.Length; i++) //for every collider detected
             {
-                CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>();
+                CharacterStats characterStats = colliders[i].transform.GetComponent<CharacterStats>(); //check for character stat comp
 
                 if(characterStats != null) //if not null
                 {
-                    Vector3 targetDirection = characterStats.transform.position - transform.position;
-                    float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
+                    Vector3 targetDirection = characterStats.transform.position - transform.position; //set target direction
+                    float viewableAngle = Vector3.Angle(targetDirection, transform.forward); //calculate angle
 
                     if(viewableAngle > enemyManager.minimumDetectionAngle && viewableAngle < enemyManager.maximumDetectionAngle) //character stat script is found on detection layer + within field of view
                     {
