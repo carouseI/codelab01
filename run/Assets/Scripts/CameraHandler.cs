@@ -19,7 +19,7 @@ namespace Run
         public float followSpeed = 0.1f; //set follow speed
         public float pivotSpeed = 0.03f; //set rotation speed
 
-        private float defaultPosition;
+        private float defaultPosition; //default position
         private float lookAngle;
         private float pivotAngle;
         public float minimumPivot = -35;
