@@ -16,25 +16,25 @@ public class PlayerPrefs : MonoBehaviour
         get
         {
             //read sound from playerprefs
-            soundVolume = PlayerPrefs.GetInt(SOUND_VOL_KEY, 20); //set playerpref to 20
+            //soundVolume = PlayerPrefs.GetInt(SOUND_VOL_KEY, 20); //set playerpref to 20
             return soundVolume; //return variable
         }
         set
         {
             soundVolume = value; //set variable to whatever value is
-            PlayerPrefs.SetInt(SOUND_VOL_KEY, soundVolume); //new value
+            //PlayerPrefs.SetInt(SOUND_VOL_KEY, soundVolume); //new value
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("blank", 2); //blank = 2
-        Debug.Log(PlayerPrefs.GetInt("blank", 5)); //read playerpref
+        //PlayerPrefs.SetInt("blank", 2); //blank = 2
+        //Debug.Log(PlayerPrefs.GetInt("blank", 5)); //read playerpref
 
-        Debug.Log(PlayerPrefs.GetInt("anotherKey")); //read playerpref anotherKey
+        //Debug.Log(PlayerPrefs.GetInt("anotherKey")); //read playerpref anotherKey
 
-        SoundVolume = 3; //use SoundVolume property, set volume to 3
-        SoundVolume = PlayerPrefs.GetInt(SOUND_VOL_KEY, 20); //or, set SV property using playerprefs
+        //SoundVolume = 3; //use SoundVolume property, set volume to 3
+        //SoundVolume = PlayerPrefs.GetInt(SOUND_VOL_KEY, 20); //or, set SV property using playerprefs
     }
 }

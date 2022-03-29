@@ -9,7 +9,7 @@ public class Melon : MonoBehaviour
 
     void Start()
     {
-        highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString(); //store number as high score, display next time game is restarted 
+        //highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString(); //store number as high score, display next time game is restarted 
     }
 
     public void UpdateScore()
@@ -17,16 +17,16 @@ public class Melon : MonoBehaviour
         int number = Random.Range(1, 10); //int = store in variables
         score.text = number.ToString(); //ToString = convert to string to add up/match with score
 
-        if(number > PlayerPrefs.GetInt("HighScore", 0)) //check if score is greater/higher than high score
-        {
-            PlayerPrefs.SetInt("HighScore", number); //if beat, set to new number
-            highScore.text = number.ToString(); //update immediately
-        }   
+        //if(number > PlayerPrefs.GetInt("HighScore", 0)) //check if score is greater/higher than high score
+        //{
+        //    PlayerPrefs.SetInt("HighScore", number); //if beat, set to new number
+        //    highScore.text = number.ToString(); //update immediately
+        //}   
     }
 
     public void Reset()
     {
-        PlayerPrefs.DeleteAll(); //reset settings + start over
+        //PlayerPrefs.DeleteAll(); //reset settings + start over
         highScore.text = "0";
     }
 }
