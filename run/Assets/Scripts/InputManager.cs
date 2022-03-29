@@ -34,7 +34,7 @@ namespace Run
                 playerControls.PlayerMovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>(); //link mouse movement with camera input
             }
 
-            playerControls.Enable();
+            playerControls.Enable(); //enable
         }
 
         private void OnDisable()
