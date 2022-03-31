@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Spawner : MonoBehaviour
+{
+
+    public float spawnRate = 1f; //spawn rate
+
+    public GameObject hexagonPrefab;
+
+    private float nextTimeToSpawn = 0f;
+
+    
+    // Update is called once per frame
+    void Update()
+    {
+        if(Time.time >= nextTimeToSpawn)
+        {
+            Instantiate(hexagonPrefab, Vector3.zero, Quaternion.identity); //vector3.zero = centre of world, quaternion = no rotation
+            nextTimeToSpawn = Time.time + 1f / spawnRate; //set next time to spawn
+        }
+    }
+}
