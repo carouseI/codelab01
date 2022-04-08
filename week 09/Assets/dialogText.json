@@ -1,0 +1,34 @@
+﻿{
+  "sceneOne": //array
+  [
+    {
+      "index": 0,
+      "line": "Hello, madam!",
+      "goto": 1 //next line after player hits contd
+    },
+    {
+      "index": 1,
+      "line": "Hello! How are you, sir?",
+      "choice": ["I am well, thank you", "I am terrible!"], //option 1 + 2
+      "goto": [2, 3] //go to scene according to option choice
+    },
+    {
+      "index": 2,
+      "line": "That is so lovely to hear, my lord.",
+      "goto": 4
+    },
+    {
+      "index": 3,
+      "line": "Oh no! How saddening, sir.",
+      "goto": 5
+    },
+    {
+      "index": 4,
+      "line": "It is such a lovely day, indeed!",
+    },
+    {
+      "index": 5,
+      "line": "I am beset with emotions! *swoons*",
+    }
+  ]
+}
