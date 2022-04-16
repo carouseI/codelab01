@@ -290,6 +290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikeball_Big (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 97ef08cc7411beb4b833c8331d89702f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97ef08cc7411beb4b833c8331d89702f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -375,6 +379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spikeball_Small (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8f445961f3af4734eab6b615aef5f1e5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8f445961f3af4734eab6b615aef5f1e5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -431,6 +439,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8f445961f3af4734eab6b615aef5f1e5, type: 3}
       propertyPath: m_Name
       value: Spikeball_Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8f445961f3af4734eab6b615aef5f1e5, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8f445961f3af4734eab6b615aef5f1e5, type: 3}
       propertyPath: m_RootOrder
@@ -1058,6 +1070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87bcc44a122bf47d987ba36eafaf3065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1730242936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1493,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 97ef08cc7411beb4b833c8331d89702f, type: 3}
       propertyPath: m_Name
       value: Spikeball_Big
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 97ef08cc7411beb4b833c8331d89702f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 97ef08cc7411beb4b833c8331d89702f, type: 3}
       propertyPath: m_RootOrder
