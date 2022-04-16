@@ -7,10 +7,14 @@ public class Raycast : MonoBehaviour
     [SerializeField]
     LayerMask layerMask;
 
+    RaycastHit hitinfo;
+
     // Update is called once per frame
     void Update()
     {
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, 20f, layerMask)) //set raycast
+        Ray ray = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
+
+        if(Physics.Raycast(ray, out RaycastHit hitinfo, 20f, layerMask, QueryTriggerInteraction.Ignore)) //set raycast
         {
             Debug.Log("Hit something"); //show msg when collision
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.red); //draw ray, ref when hit
