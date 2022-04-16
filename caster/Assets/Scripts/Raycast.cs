@@ -8,13 +8,15 @@ public class Raycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, 20f))
+        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hitinfo, 20f)) //set raycast
         {
-            Debug.Log("Hit something");
+            Debug.Log("Hit something"); //show msg when collision
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitinfo.distance, Color.red); //draw ray, ref when hit
         }
         else
         {
-            Debug.Log("Hit nothing");
+            Debug.Log("Hit nothing"); //show msg when no collision
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20f, Color.green); //draw ray, green when nothing
         }
     }
 }
