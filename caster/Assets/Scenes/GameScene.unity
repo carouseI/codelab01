@@ -1123,9 +1123,7 @@ MonoBehaviour:
   scoreText: {fileID: 1976918105}
   highScoreText: {fileID: 2020652125}
   highScore: 0
-  prefab: {fileID: 0}
-  playersPlatform: {fileID: 0}
-  enemy: {fileID: 0}
+  enemy: {fileID: 36814094}
   hitOnce: 0
 --- !u!4 &1129033264
 Transform:
