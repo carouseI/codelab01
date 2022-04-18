@@ -1125,6 +1125,8 @@ MonoBehaviour:
   highScore: 0
   prefab: {fileID: 0}
   playersPlatform: {fileID: 0}
+  enemy: {fileID: 0}
+  hitOnce: 0
 --- !u!4 &1129033264
 Transform:
   m_ObjectHideFlags: 0
@@ -2556,7 +2558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1976918103
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2617,7 +2619,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Hits:'
+  m_Text: 'hits:'
 --- !u!1001 &2011146127
 PrefabInstance:
   m_ObjectHideFlags: 0
