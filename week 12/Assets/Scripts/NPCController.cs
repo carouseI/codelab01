@@ -16,7 +16,7 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Util.CanSeeObj(player, gameObject, 0.5f))
+        if(Util.CanSeeObj(player, gameObject, 0.9f))
         {
             Debug.Log("player in sight");
         }

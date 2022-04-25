@@ -13,8 +13,10 @@ namespace MathUtil //same function as libraries
 
             float angleDist = Vector3.Dot(origin.transform.forward, dir);
 
-            Debug.DrawRay(destination.transform.position, origin.transform.forward * 10, Color.red);
-            Debug.DrawRay(origin.transform.position, dir * 10, Color.green);
+            Debug.Log(angleDist); //show angleDist
+
+            Debug.DrawRay(destination.transform.position, origin.transform.forward * 10, Color.red); //show red tracker, direction
+            Debug.DrawRay(origin.transform.position, dir * 10, Color.green); //show green tracker, player origin
 
             if(angleDist > range) //if angle is higher/closer to line
             {
