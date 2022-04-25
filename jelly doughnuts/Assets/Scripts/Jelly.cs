@@ -13,6 +13,10 @@ public class Jelly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float x = transform.position.x;
+        float y = Mathf.Sin(Time.time); //set y to Sine wave; move through time, ping pong between 1 and -1
+        float z = transform.position.z;
+
+        transform.position = new Vector3(x, y, z); //constantly set position to Vector3.0
     }
 }
