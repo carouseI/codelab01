@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Util //same function as libraries
+namespace MathUtil //same function as libraries
 {
     public class Util : MonoBehaviour
     {
-        private static bool CanSeeObj(GameObject destination, GameObject origin, float range)
+        public static bool CanSeeObj(GameObject destination, GameObject origin, float range)
         {
             //dot product = angle beween 2 lines
             Vector3 dir = Vector3.Normalize(destination.transform.position - origin.transform.position); //normalise = magnitude, takes out length of a line; destination = find position between 2 vectors, origin = starting point, NPC/cube [give direction between 2 points]
+
             float angleDist = Vector3.Dot(origin.transform.forward, dir);
 
             Debug.DrawRay(destination.transform.position, origin.transform.forward * 10, Color.red);
