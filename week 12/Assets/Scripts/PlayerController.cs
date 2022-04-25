@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         getInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); //getAxis H = W, S (up/down); getAxis V = A, D (left/right)
-        Debug.Log(getInput);
+        //Debug.Log(getInput);
     }
 
     private void FixedUpdate()
