@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jelly : MonoBehaviour
+public class Bob : MonoBehaviour
 {
     [SerializeField]
     private int _amplitude = 1; //multiply Sine function by amplitude value
@@ -13,7 +13,7 @@ public class Jelly : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JellyOrbit : MonoBehaviour
+public class Orbit : MonoBehaviour
 {
     [SerializeField]
     private int _amplitude = 1; //multiply Sine function by amplitude value
@@ -28,7 +28,7 @@ public class JellyOrbit : MonoBehaviour
         #endregion
 
         #region //Cos
-        float x = Mathf.Cos(Time.time *  _frequency) * _amplitude; //multiply to adjust height/length of cosine
+        float x = Mathf.Cos(Time.time * _frequency) * _amplitude; //multiply to adjust height/length of cosine
         //float y = transform.position.y;
         float z = transform.position.z;
 
