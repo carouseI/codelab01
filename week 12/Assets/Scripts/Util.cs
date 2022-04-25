@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Util //same function as libraries^
+namespace Util //same function as libraries
 {
     public class Util : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        private static bool CanSeeObj(GameObject destination, GameObject origin, float range)
         {
+            //dot product = angle beween 2 lines
+            Vector3 dir = Vector3.Normalize(destination.transform.position - origin.transform.position); //normalise = magnitude, takes out length of a line; destination = find position between 2 vectors, origin = starting point, NPC/cube [give direction between 2 points]
+            float angleDist = Vector3.Dot(origin.transform.forward, dir);
 
-        }
+            Debug.DrawRay(destination.transform.position, origin.transform.forward * 10, Color.red);
+            Debug.DrawRay(origin.transform.position, dir * 10, Color.green);
 
-        // Update is called once per frame
-        void Update()
-        {
-
+            if(angleDist > range) //if angle is higher/closer to line
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
