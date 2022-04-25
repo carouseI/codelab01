@@ -7,6 +7,8 @@ public class NPCController : MonoBehaviour
 {
     GameObject player;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,8 @@ public class NPCController : MonoBehaviour
     {
         if(Util.CanSeeObj(player, gameObject, 0.9f))
         {
-            Debug.Log("player in sight");
+            //Debug.Log("player in sight");
         }
-        
+        Util.ObjSide(player, gameObject);
     }
 }
