@@ -418,7 +418,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Click to increase
+  m_Text: '[click to play]'
 --- !u!222 &601681373
 CanvasRenderer:
   m_ObjectHideFlags: 0
