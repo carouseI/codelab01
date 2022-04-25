@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jelly : MonoBehaviour
+public class JellyOrbit : MonoBehaviour
 {
     [SerializeField]
     private int _amplitude = 1; //multiply Sine function by amplitude value
@@ -13,14 +13,14 @@ public class Jelly : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         #region //Sin
-        float x = transform.position.x;
+        //float x = transform.position.x;
         float y = Mathf.Sin(Time.time * _frequency) * _amplitude; //set y to Sine wave; move through time, ping pong between 1 and -1
         //float z = transform.position.z;
 
@@ -28,7 +28,7 @@ public class Jelly : MonoBehaviour
         #endregion
 
         #region //Cos
-        //float x = Mathf.Cos(Time.time *  _frequency) * _amplitude; //multiply to adjust height/length of cosine
+        float x = Mathf.Cos(Time.time *  _frequency) * _amplitude; //multiply to adjust height/length of cosine
         //float y = transform.position.y;
         float z = transform.position.z;
 
