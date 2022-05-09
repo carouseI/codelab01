@@ -11,7 +11,11 @@ namespace Mul
         #region //serialisable fields
         [SerializeField]
         private float timeMultiplier; //controls speed of time
+
+        [SerializeField]
         private float startHour; //set start default time
+
+        [SerializeField]
         private TextMeshProUGUI timeText; //display current time
 
         [SerializeField]
@@ -19,16 +23,32 @@ namespace Mul
 
         [SerializeField]
         private float sunriseHour;
+
+        [SerializeField]
         private float sunsetHour;
 
+
+        #region //ambient light
         [SerializeField]
         private Color dayAmbientLight;
-        private Color nightAmbientLight;
-        private AnimationCurve lighChangeCurve; //smooth transition between 2
 
         [SerializeField]
+        private Color nightAmbientLight;
+        #endregion
+
+
+        [SerializeField]
+        private AnimationCurve lighChangeCurve; //smooth transition between 2
+
+
+        #region //light intensity
+        [SerializeField]
         private float maxSunLightIntensity;
+
+        [SerializeField]
         private float maxMoonLightIntensity;
+        #endregion
+
 
         [SerializeField]
         private Light moonLight;
