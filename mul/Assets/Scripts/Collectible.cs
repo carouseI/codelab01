@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectible : MonoBehaviour
+namespace Mul
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Collectible : MonoBehaviour
     {
-        
-    }
+       private void OnTriggerEnter(Collider other) //detect char + obj collision; call whenever smth collides with xtal
+        {
+            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>(); //check collision is with char, check for playerInventory comp
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if(playerInventory != null) //if not null
+            {
+                playerInventory.CrystalsCollected(); //use playerInventory to call xtal collected method
+                gameObject.SetActive(false); //when collected, set to inactive
+            }
+        }
     }
 }

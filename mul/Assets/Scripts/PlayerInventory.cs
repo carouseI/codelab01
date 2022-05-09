@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInventory : MonoBehaviour
+namespace Mul
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerInventory : MonoBehaviour
     {
-        
-    }
+        public int CrystalCount { get; private set; } //can be read by other scripts, can only be set in this one
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void CrystalsCollected()
+        {
+            CrystalCount++; //increment
+
+        }
     }
 }
