@@ -59,7 +59,7 @@ namespace Mul
             cameraInputX = cameraInput.x;
 
             moveAmount = Mathf.Clamp01(Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput)); //abs = absolute, takes away sign in front of values, make negatives into positives; Mathf.Clamp01 = clamp between values of 0 + 1
-            //animatorManager.UpdateAnimatorValues(0, moveAmount); //0 = no movement on horizontal until strafing is used
+            animatorManager.UpdateAnimatorValues(0, moveAmount); //0 = no movement on horizontal until strafing is used
         }
     }
 }
