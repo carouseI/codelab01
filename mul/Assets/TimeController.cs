@@ -58,6 +58,21 @@ namespace Mul
             }
         }
 
+        private void RotateSun()
+        {
+            float sunLightRotation; //variable to hold rotation of sun
+
+            if(currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime) //check if daytime + current time of day is between sunrise/sunset
+            {
+                TimeSpan sunriseToSunsetDuration = CalculateTimeDifference(sunriseTime, sunriseTime); //if true, calculate total time between sunrise + sunset
+                TimeSpan timeSinceSunrise = CalculateTimeDifference(sunriseTime, currentTime.TimeOfDay); //calculate amt of time has passed since sunrise
+
+                double percentage = timeSinceSunrise.TotalMinutes / sunriseToSunsetDuration.TotalMinutes; //use 2 values above, calculate % of time has passed; divide amt of minutes since sunrise by total amt of minutes from sunrise to sunset
+
+                sunLightRotation = Mathf.Lerp(0, 180, (float)percentage); //use % to calculate rotation, lerp between 0-180, use % as interpellation value; cast to float for full function; set rotation value to 0 @ sunrise + increase til 180 @ sunset
+            }
+        }
+
         private TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime) //work our rotation of sun according to time of day; takes fromTime + toTime parameters, return difference between 2 times
         {
             TimeSpan difference = toTime - fromTime; //subtract 1 from other to calculate time
