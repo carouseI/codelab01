@@ -630,7 +630,6 @@ GameObject:
   - component: {fileID: 73388989}
   - component: {fileID: 73388990}
   - component: {fileID: 73388993}
-  - component: {fileID: 73388992}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -667,23 +666,6 @@ CapsuleCollider:
   m_Height: 2.440527
   m_Direction: 1
   m_Center: {x: -3.330348, y: 2.6156836, z: -9.107871}
---- !u!114 &73388992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73388988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4615e2164f0439eb0e3bf9cf79162f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontal: 0
-  vertical: 0
-  moveAmount: 0
-  mouseX: 0
-  mouseY: 0
 --- !u!54 &73388993
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9620,6 +9602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48144e8d7b7a14a5aa638a060d8c7e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myTransform: {fileID: 0}
   movementSpeed: 7
   rotationSpeed: 15
 --- !u!114 &1883687934

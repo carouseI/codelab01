@@ -9,6 +9,7 @@ namespace Mul
         PlayerManager playerManager;
         //InputHandler inputHandler;
         PlayerLocomotion playerLocomotion;
+
         int vertical;
         int horizontal;
         public bool canRotate;
@@ -87,6 +88,7 @@ namespace Mul
             //anim.SetFloat(horizontal, h, 0.1f, Time.deltaTime);
         }
 
+        #region //rotating, combo settings
         public void CanRotate()
         {
             canRotate = true;
@@ -106,7 +108,7 @@ namespace Mul
         {
             anim.SetBool("canDoCombo", false);
         }
-
+        #endregion
 
         private void OnAnimatorMove() //temporarily commented out
         {
