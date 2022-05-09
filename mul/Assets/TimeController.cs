@@ -46,6 +46,7 @@ namespace Mul
         void Update()
         {
             UpdateTimeOfDay(); //call method
+            RotateSun(); //call sun rotation method
         }
 
         private void UpdateTimeOfDay()
@@ -62,7 +63,8 @@ namespace Mul
         {
             float sunLightRotation; //variable to hold rotation of sun
 
-            if(currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime) //check if daytime + current time of day is between sunrise/sunset
+            #region //day
+            if (currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime) //check if daytime + current time of day is between sunrise/sunset
             {
                 TimeSpan sunriseToSunsetDuration = CalculateTimeDifference(sunriseTime, sunriseTime); //if true, calculate total time between sunrise + sunset
                 TimeSpan timeSinceSunrise = CalculateTimeDifference(sunriseTime, currentTime.TimeOfDay); //calculate amt of time has passed since sunrise
@@ -71,6 +73,20 @@ namespace Mul
 
                 sunLightRotation = Mathf.Lerp(0, 180, (float)percentage); //use % to calculate rotation, lerp between 0-180, use % as interpellation value; cast to float for full function; set rotation value to 0 @ sunrise + increase til 180 @ sunset
             }
+            #endregion
+            #region //night
+            else
+            {
+                TimeSpan sunsetToSunriseDuration = CalculateTimeDifference(sunsetTime, sunriseTime); //calculate time between sunset + sunrise
+                TimeSpan timeSinceSunset = CalculateTimeDifference(sunsetTime, currentTime.TimeOfDay); //calculate time since sunset
+
+                double percentage = timeSinceSunset.TotalMinutes / sunsetToSunriseDuration.TotalMinutes; //use values to calculate % of night that has passed
+
+                sunLightRotation = Mathf.Lerp(180, 360, (float)percentage); //calculate rotation
+            }
+            #endregion
+
+            sunLight.transform.rotation = Quaternion.AngleAxis(sunLightRotation, Vector3.right); //apply rotation to sunlight, use Quaternion angle axis method; pass in Vector3.right for axis, rotate around x axis
         }
 
         private TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime) //work our rotation of sun according to time of day; takes fromTime + toTime parameters, return difference between 2 times
