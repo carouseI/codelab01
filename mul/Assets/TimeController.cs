@@ -11,11 +11,7 @@ namespace Mul
         #region //serialisable fields
         [SerializeField]
         private float timeMultiplier; //controls speed of time
-
-        [SerializeField]
         private float startHour; //set start default time
-
-        [SerializeField]
         private TextMeshProUGUI timeText; //display current time
 
         [SerializeField]
@@ -23,9 +19,19 @@ namespace Mul
 
         [SerializeField]
         private float sunriseHour;
+        private float sunsetHour;
 
         [SerializeField]
-        private float sunsetHour;
+        private Color dayAmbientLight;
+        private Color nightAmbientLight;
+        private AnimationCurve lighChangeCurve; //smooth transition between 2
+
+        [SerializeField]
+        private float maxSunLightIntensity;
+        private float maxMoonLightIntensity;
+
+        [SerializeField]
+        private Light moonLight;
         #endregion
 
         private DateTime currentTime; //track current time; frame by frame progression
@@ -47,6 +53,7 @@ namespace Mul
         {
             UpdateTimeOfDay(); //call method
             RotateSun(); //call sun rotation method
+            UpdateLightSettings(); //call light settings
         }
 
         private void UpdateTimeOfDay()
@@ -87,6 +94,14 @@ namespace Mul
             #endregion
 
             sunLight.transform.rotation = Quaternion.AngleAxis(sunLightRotation, Vector3.right); //apply rotation to sunlight, use Quaternion angle axis method; pass in Vector3.right for axis, rotate around x axis
+        }
+
+        private void UpdateLightSettings()
+        {
+            float dotProduct = Vector3.Dot(sunLight.transform.forward, Vector3.down); //calculate dot product of forward + down direciton of sun; give value between -1 (up) + 1 (down) depending on direction similarity, 0 (horizontal)
+            sunLight.intensity = Mathf.Lerp(0, maxSunLightIntensity, lighChangeCurve.Evaluate(dotProduct)); //adjust sun intensity to max @ midday, set to value between 0 + max; use dotProduct as interpellation value, feed into curve for control
+            moonLight.intensity = Mathf.Lerp(maxMoonLightIntensity, 0, lighChangeCurve.Evaluate(dotProduct));//set sun intensity to 0 @ night;lerp from max to 0, set for sun to transition on as sun transitions off
+            RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lighChangeCurve.Evaluate(dotProduct)); //set ambient light, use colour lerp for transition
         }
 
         private TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime) //work our rotation of sun according to time of day; takes fromTime + toTime parameters, return difference between 2 times
