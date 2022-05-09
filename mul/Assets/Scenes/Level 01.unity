@@ -5591,6 +5591,10 @@ PrefabInstance:
       propertyPath: m_CullingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95340733316770424, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114551384804589004, guid: 2abf19653d633114faedf3b60dc6c39f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -9524,6 +9528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3a6c78a2a0e4469bb6e9fb3f6b11ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &1883687932
 MonoBehaviour:
   m_ObjectHideFlags: 0
