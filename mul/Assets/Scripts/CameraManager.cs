@@ -11,11 +11,15 @@ namespace Mul
         public Transform targetTransform; //object camera will follow, after every frame is processed
         public Transform cameraPivot; //object camera uses to pivot
         public Transform cameraTransform; //transform of actual camera object in scene
+
         public LayerMask collisionLayers; //things camera will collide with in environment
+
         private float defaultPosition; //camera default position
+
         private Vector3 cameraFollowVelocity = Vector3.zero; //camera follow speed
         private Vector3 cameraVectorPosition; //use vector3 to edit z position, cannot use transform
 
+        #region //public floats
         public float cameraCollisionOffset = 0.2f; //big offset = big distance pushed away from object -- how much camera will jump off objects; keep low
         public float minimumCollisionOffset = 0.2f;
         public float cameraCollisionRadius = 2; //use for raycasting, keep small
@@ -27,6 +31,7 @@ namespace Mul
         public float pivotAngle; //camera, left/right
         public float minimumPivotAngle = -35;
         public float maximumPivotAngle = 35;
+        #endregion
 
         private void Awake()
         {
