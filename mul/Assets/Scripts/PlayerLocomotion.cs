@@ -12,6 +12,10 @@ namespace Mul
         Transform cameraObject;
         Rigidbody playerRigidbody;
 
+
+        [HideInInspector]
+        public Transform myTransform;
+
         public float movementSpeed = 7; //set movement speed
         public float rotationSpeed = 15; //set rotation speed
 

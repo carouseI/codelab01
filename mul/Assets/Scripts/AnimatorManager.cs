@@ -24,6 +24,7 @@ namespace Mul
             //animation snapping = if value is not quite walking or running + about to walk/run, code will snap to appropriate action + round values depending on distance
             float snappedHorizontal;
             float snappedVertical;
+
             #region SnappedHorizontal
             if (horizontalMovement > 0 && horizontalMovement < 0.55f) //if greater than 0 + less the 0.55
             {
