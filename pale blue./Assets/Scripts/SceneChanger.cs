@@ -10,4 +10,9 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("pressed button"); //check button functionality
         SceneManager.LoadScene(sceneName); //load scene
     }
+
+    public void Awake()
+    {
+        Cursor.visible = true;
+    }
 }

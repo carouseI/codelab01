@@ -15,6 +15,8 @@ namespace PaleBlue
             inputManager = GetComponent<InputManager>(); //check for object with input manager comp
             cameraManager = FindObjectOfType<CameraManager>(); //find camera manager
             playerLocomotion = GetComponent<PlayerLocomotion>(); //check for object with locomotion comp
+
+            Cursor.visible = false;
         }
 
         private void Update()
