@@ -33,5 +33,13 @@ namespace PaleBlue
         {
             cameraManager.HandleAllCameramovement(); //follow player
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.tag == "Abyss") //if collision with object with Abyss tag
+            {
+                transform.position = new Vector3(0, 1.81f, -8.879506f); //respawn @ start
+            }
+        }
     }
 }
