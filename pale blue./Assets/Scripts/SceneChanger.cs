@@ -13,6 +13,6 @@ public class SceneChanger : MonoBehaviour
 
     public void Awake()
     {
-        Cursor.visible = true;
+        Cursor.visible = true; //set cursor to visible
     }
 }
