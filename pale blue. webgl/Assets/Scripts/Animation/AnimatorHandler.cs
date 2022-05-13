@@ -10,8 +10,8 @@ namespace PaleBlue
         //InputHandler inputHandler;
         PlayerLocomotion playerLocomotion;
 
-        int vertical;
-        int horizontal;
+        int vert;
+        int hori;
         public bool canRotate;
 
 
@@ -20,8 +20,8 @@ namespace PaleBlue
             playerManager = GetComponentInParent<PlayerManager>(); //find player manager comp
             anim = GetComponent<Animator>(); //find animator comp
             //inputHandler = GetComponentInParent<PlayerLocomotion>();
-            vertical = Animator.StringToHash("Vertical"); //set vertical movement
-            horizontal = Animator.StringToHash("Horizontal"); //set horizontal movement
+            vert = Animator.StringToHash("Vertical"); //set vertical movement
+            hori = Animator.StringToHash("Horizontal"); //set horizontal movement
         }
 
         public void UpdateAnimatorValues(float verticalMovement, float horizontalMovement, bool isSprinting)
