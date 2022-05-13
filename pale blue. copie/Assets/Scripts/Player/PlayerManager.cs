@@ -31,7 +31,7 @@ namespace PaleBlue
 
         private void LateUpdate() //lateUpdate = recommended when using fixedUpdate on rb, calls update after frame ended
         {
-            cameraManager.HandleAllCameramovement(); //follow player
+            //cameraManager.HandleAllCameramovement(); //follow player
         }
 
         private void OnTriggerEnter(Collider other)
